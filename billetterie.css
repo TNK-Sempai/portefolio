@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Outfit:wght@300;400;500&display=swap');
+
+/* ── BASE ── */
+ike-layout, ike-full, ike-home {
+  --color-primary: #C9A84C;
+  background-color: #080807 !important;
+  color: #F0EAD6 !important;
+  font-family: 'Outfit', sans-serif !important;
+}
+
+/* ── HEADER / NAVBAR ── */
+ike-header, ike-navbar {
+  background-color: #080807 !important;
+  border-bottom: 1px solid rgba(201,168,76,0.2) !important;
+}
+
+/* ── TITRES ── */
+ike-home h1, ike-home h2, ike-home h3,
+ike-event h1, ike-event h2,
+ike-event-infos h1, ike-event-infos h2 {
+  font-family: 'Cormorant Garamond', serif !important;
+  color: #F0EAD6 !important;
+}
+
+/* ── CARTES ÉVÉNEMENTS ── */
+ike-event-card, ike-item-card, ike-pass-card {
+  background-color: #1e1c1a !important;
+  border: 1px solid rgba(201,168,76,0.15) !important;
+  color: #F0EAD6 !important;
+}
+
+/* ── BOUTONS ── */
+ike-button-loader button,
+ike-event-validation-button button,
+ike-link a {
+  background-color: #C9A84C !important;
+  color: #080807 !important;
+  font-family: 'Outfit', sans-serif !important;
+  border: none !important;
+  border-radius: 0 !important;
+}
+
+ike-button-loader button:hover,
+ike-event-validation-button button:hover {
+  background-color: #E8C97A !important;
+}
+
+/* ── PANIER ── */
+ike-cart, ike-cart-content, ike-cart-summary {
+  background-color: #1e1c1a !important;
+  color: #F0EAD6 !important;
+  border-color: rgba(201,168,76,0.2) !important;
+}
+
+/* ── FOOTER ── */
+ike-footer {
+  background-color: #080807 !important;
+  border-top: 1px solid rgba(201,168,76,0.2) !important;
+  color: #9a9088 !important;
+}
