@@ -26,7 +26,11 @@ body {
   line-height: 1.6;
   cursor: none;
   overflow-x: hidden;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
+footer { margin-top: auto; }
 
 /* ─── NOISE OVERLAY ─── */
 body::before {
@@ -599,17 +603,80 @@ footer {
 }
 footer .f-left { display:flex; align-items:center; gap:2rem; }
 .f-logo { font-family:var(--font-display); font-size:1.2rem; letter-spacing:.18em; color:var(--accent); }
-.f-copy { font-family:var(--font-mono); font-size:.65rem; letter-spacing:.1em; color:var(--muted); }
+.f-copy { font-family:var(--font-mono); font-size:.65rem; letter-spacing:.1em; color:#a8a39c; }
 .f-right { display:flex; gap:2rem; }
 .f-right a {
   font-family:var(--font-mono); font-size:.65rem; letter-spacing:.12em;
-  text-transform:uppercase; color:var(--muted); text-decoration:none; transition:color .2s;
+  text-transform:uppercase; color:#a8a39c; text-decoration:none; transition:color .2s;
 }
 .f-right a:hover { color:var(--text); }
 
 /* ─── REVEAL ─── */
 .reveal { opacity:0; transform:translateY(25px); transition:opacity .9s, transform .9s cubic-bezier(.25,.46,.45,.94); }
 .reveal.visible { opacity:1; transform:none; }
+
+/* ─── NAV HAMBURGER ─── */
+.nav-burger {
+  display:none;
+  flex-direction:column; justify-content:center; gap:5px;
+  width:36px; height:36px;
+  background:transparent; border:none;
+  cursor:pointer; padding:4px; z-index:600;
+}
+.nav-burger span {
+  display:block; height:1.5px; width:100%;
+  background:var(--text); border-radius:2px;
+  transition: transform .3s, opacity .3s;
+}
+.nav-burger.open span:nth-child(1) { transform:translateY(6.5px) rotate(45deg); }
+.nav-burger.open span:nth-child(2) { opacity:0; }
+.nav-burger.open span:nth-child(3) { transform:translateY(-6.5px) rotate(-45deg); }
+
+.nav-mobile {
+  display:none;
+  position:fixed; inset:0; z-index:490;
+  background:rgba(9,9,14,.97);
+  backdrop-filter:blur(24px);
+  flex-direction:column; align-items:center; justify-content:center;
+  gap:2rem;
+}
+.nav-mobile.open { display:flex; }
+.nav-mobile a {
+  font-family:var(--font-display);
+  font-size:clamp(2.5rem,10vw,4rem);
+  letter-spacing:.08em; text-transform:uppercase;
+  color:var(--muted2); text-decoration:none;
+  transition:color .2s;
+}
+.nav-mobile a:hover, .nav-mobile a.active { color:var(--accent); }
+.nav-mobile .nav-mobile-cta {
+  font-family:var(--font-mono);
+  font-size:.8rem; letter-spacing:.16em; text-transform:uppercase;
+  padding:.65rem 1.8rem;
+  border:1px solid rgba(200,240,96,.3);
+  color:var(--accent) !important;
+  border-radius:2px; margin-top:.5rem;
+  font-size:.72rem;
+}
+
+/* ─── PROJECTS PAGE HIERARCHY ─── */
+#widgets { background:var(--bg); padding-top:5rem; padding-bottom:5rem; }
+#widgets .section-h { font-size:clamp(1.8rem,3.5vw,3.2rem); }
+#widgets .label { opacity:.7; }
+
+#ti { background:var(--surface); padding-top:4rem; padding-bottom:4rem; }
+#ti .section-h { font-size:clamp(1.4rem,2.5vw,2.5rem); color:var(--muted2); }
+#ti .label { opacity:.55; }
+#ti .label .label-n { color:var(--muted); }
+#ti .widget-card { border-color:rgba(255,255,255,.04); }
+#ti .widget-card:hover { border-color:rgba(200,240,96,.15); }
+
+/* ─── NO CURSOR ON TOUCH ─── */
+@media (hover:none), (pointer:coarse) {
+  body { cursor:auto !important; }
+  #cur, #cur-ring { display:none !important; }
+  .proj-card, .tech-pill, .c-btn, .strip-arrow span, .widget-card { cursor:pointer; }
+}
 
 /* ─── RESPONSIVE ─── */
 @media(max-width:1024px) {
@@ -620,10 +687,18 @@ footer .f-left { display:flex; align-items:center; gap:2rem; }
 @media(max-width:768px) {
   nav { padding:1.2rem 1.5rem; }
   .nav-links,.nav-cta { display:none; }
+  .nav-burger { display:flex; }
   section { padding:5rem 1.5rem; }
   #hero { padding:0 1.5rem 4rem; }
   .hero-year { display:none; }
+  .hero-row { flex-direction:column; align-items:flex-start; gap:1.5rem; }
+  .hero-meta { text-align:left; }
+  .hero-loc { text-align:left; }
   .process-grid { grid-template-columns:1fr; }
   footer { flex-direction:column; gap:1.2rem; text-align:center; }
   footer .f-left { flex-direction:column; gap:.5rem; }
+  .proj-card, .proj-card.big { width:calc(100vw - 3rem); }
+  .proj-strip { margin:0 -1.5rem; padding:0 1.5rem 2rem; }
+  #widgets { padding-top:3.5rem; padding-bottom:3.5rem; }
+  #ti { padding-top:3rem; padding-bottom:3rem; }
 }
