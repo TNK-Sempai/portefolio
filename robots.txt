@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /img/
+Disallow: /assets/
+
+Sitemap: https://tanuki-corporation.com/sitemap.xml
