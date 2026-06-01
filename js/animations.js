@@ -22,6 +22,8 @@ const navbar = document.getElementById('navbar');
 if (navbar) {
   ScrollTrigger.create({
     start: 'top -80',
+    lazy: false,
+    invalidateOnRefresh: true,
     onEnter: () => navbar.classList.add('scrolled'),
     onLeaveBack: () => navbar.classList.remove('scrolled')
   });
@@ -30,10 +32,13 @@ if (navbar) {
 /* ─── FADE UP ON SCROLL ─── */
 document.querySelectorAll('[data-gsap="fade-up"]').forEach(el => {
   gsap.from(el, {
+    immediateRender: false,
     scrollTrigger: {
       trigger: el,
       start: 'top 88%',
-      toggleActions: 'play none none none'
+      toggleActions: 'play none none none',
+      lazy: false,
+      invalidateOnRefresh: true
     },
     y: 50,
     opacity: 0,
@@ -45,10 +50,13 @@ document.querySelectorAll('[data-gsap="fade-up"]').forEach(el => {
 /* ─── FADE LEFT ─── */
 document.querySelectorAll('[data-gsap="fade-left"]').forEach(el => {
   gsap.from(el, {
+    immediateRender: false,
     scrollTrigger: {
       trigger: el,
       start: 'top 88%',
-      toggleActions: 'play none none none'
+      toggleActions: 'play none none none',
+      lazy: false,
+      invalidateOnRefresh: true
     },
     x: -60,
     opacity: 0,
@@ -60,10 +68,13 @@ document.querySelectorAll('[data-gsap="fade-left"]').forEach(el => {
 /* ─── FADE RIGHT ─── */
 document.querySelectorAll('[data-gsap="fade-right"]').forEach(el => {
   gsap.from(el, {
+    immediateRender: false,
     scrollTrigger: {
       trigger: el,
       start: 'top 88%',
-      toggleActions: 'play none none none'
+      toggleActions: 'play none none none',
+      lazy: false,
+      invalidateOnRefresh: true
     },
     x: 60,
     opacity: 0,
@@ -76,10 +87,13 @@ document.querySelectorAll('[data-gsap="fade-right"]').forEach(el => {
 document.querySelectorAll('[data-gsap="stagger"]').forEach(container => {
   const children = container.children;
   gsap.from(children, {
+    immediateRender: false,
     scrollTrigger: {
       trigger: container,
       start: 'top 85%',
-      toggleActions: 'play none none none'
+      toggleActions: 'play none none none',
+      lazy: false,
+      invalidateOnRefresh: true
     },
     y: 40,
     opacity: 0,
@@ -89,13 +103,16 @@ document.querySelectorAll('[data-gsap="stagger"]').forEach(container => {
   });
 });
 
-/* ─── TITLE REVEAL (split char) ─── */
+/* ─── TITLE REVEAL (clip-path) ─── */
 document.querySelectorAll('.section-title').forEach(title => {
   gsap.from(title, {
+    immediateRender: false,
     scrollTrigger: {
       trigger: title,
       start: 'top 90%',
-      toggleActions: 'play none none none'
+      toggleActions: 'play none none none',
+      lazy: false,
+      invalidateOnRefresh: true
     },
     clipPath: 'inset(0 100% 0 0)',
     duration: 1.1,
@@ -107,10 +124,13 @@ document.querySelectorAll('.section-title').forEach(title => {
 document.querySelectorAll('.skill-bar-fill').forEach(bar => {
   const width = bar.getAttribute('data-width') || '80%';
   gsap.from(bar, {
+    immediateRender: false,
     scrollTrigger: {
       trigger: bar,
       start: 'top 90%',
-      toggleActions: 'play none none none'
+      toggleActions: 'play none none none',
+      lazy: false,
+      invalidateOnRefresh: true
     },
     width: 0,
     duration: 1.2,
@@ -122,10 +142,13 @@ document.querySelectorAll('.skill-bar-fill').forEach(bar => {
 /* ─── GOLDEN LINE DRAW (séparateurs) ─── */
 document.querySelectorAll('.line-draw').forEach(line => {
   gsap.from(line, {
+    immediateRender: false,
     scrollTrigger: {
       trigger: line,
       start: 'top 92%',
-      toggleActions: 'play none none none'
+      toggleActions: 'play none none none',
+      lazy: false,
+      invalidateOnRefresh: true
     },
     scaleX: 0,
     transformOrigin: 'left center',
@@ -167,3 +190,6 @@ if (cursor && cursorRing) {
     gsap.to(cursorRing, { x: e.clientX, y: e.clientY, duration: 0.35 });
   });
 }
+
+/* ─── FORCE RECALCUL POSITIONS ─── */
+ScrollTrigger.refresh();

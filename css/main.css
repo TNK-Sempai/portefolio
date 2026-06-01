@@ -91,13 +91,13 @@ body::before {
 }
 
 /* ══ 6. NAVBAR ══ */
-nav {
+nav.navbar {
   position:fixed; top:0; left:0; right:0; z-index:500;
   padding: 1.6rem 3.5rem;
   transition: all .5s;
 }
 .nav-container { display:flex; justify-content:space-between; align-items:center; }
-nav.scrolled {
+nav.navbar.scrolled {
   padding: 1rem 3.5rem;
   background: rgba(9,9,14,.85);
   backdrop-filter: blur(24px) saturate(1.4);
@@ -737,7 +737,7 @@ footer .f-left { display:flex; align-items:center; gap:2rem; }
   .widgets-grid { grid-template-columns: repeat(2, 1fr); }
 }
 @media(max-width:768px) {
-  nav { padding:1.2rem 1.5rem; }
+  nav.navbar { padding:1.2rem 1.5rem; }
   .nav-links,.nav-cta { display:none; }
   .nav-toggle { display:flex; }
   .footer-top,.footer-bottom { flex-direction:column; gap:.8rem; text-align:center; }
