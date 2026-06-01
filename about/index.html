@@ -18,15 +18,19 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <meta property="og:url" content="https://tanuki-corporation.com/about">
     <meta property="og:title" content="À propos — Lass Tanuki Sempaï | Tanuki Corporation">
     <meta property="og:description" content="Découvrez le parcours de Lass Tanuki Sempaï, développeur Full-Stack passionné basé à Bruxelles.">
-    <meta property="og:image" content="https://tanuki-corporation.com/img/og-image.jpg">
+    <meta property="og:image" content="https://tanuki-corporation.com/img/og-image.png">
     <meta property="og:locale" content="fr_BE">
     <meta property="og:site_name" content="Tanuki Corporation">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="À propos — Lass Tanuki Sempaï">
     <meta name="twitter:description" content="Découvrez le parcours de Lass Tanuki Sempaï, développeur Full-Stack à Bruxelles.">
-    <meta name="twitter:image" content="https://tanuki-corporation.com/img/og-image.jpg">
+    <meta name="twitter:image" content="https://tanuki-corporation.com/img/og-image.png">
     <title>À propos — Tanuki Sempaï</title>
     <link rel="stylesheet" href="/css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 </head>
 
 <body>
@@ -38,16 +42,18 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div id="cur"></div>
     <div id="cur-ring"></div>
 
-    <nav id="nav">
-        <a href="/" class="nav-logo">TANUKI</a>
-        <div class="nav-links">
-            <a href="/about" data-n="01" data-page="/about">À propos</a>
-            <a href="/projects" data-n="02" data-page="/projects">Projets</a>
-            <a href="/skills" data-n="03" data-page="/skills">Skills</a>
-            <a href="/contact" data-n="04" data-page="/contact">Contact</a>
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="/" class="nav-logo">TANUKI</a>
+            <ul class="nav-links">
+                <li><a href="/about" class="nav-link" data-n="01" data-page="/about">À propos</a></li>
+                <li><a href="/projects" class="nav-link" data-n="02" data-page="/projects">Projets</a></li>
+                <li><a href="/skills" class="nav-link" data-n="03" data-page="/skills">Skills</a></li>
+                <li><a href="/contact" class="nav-link" data-n="04" data-page="/contact">Contact</a></li>
+            </ul>
+            <a href="mailto:contact@tanuki-corporation.com" class="nav-cta">Disponible →</a>
+            <button class="nav-toggle" id="navToggle" aria-label="Menu"><span></span><span></span><span></span></button>
         </div>
-        <a href="mailto:contact@tanuki-corporation.com" class="nav-cta">Disponible →</a>
-        <button class="nav-burger" id="navBurger" aria-label="Menu"><span></span><span></span><span></span></button>
     </nav>
     <div class="nav-mobile" id="navMobile">
         <a href="/" data-page="/">Accueil</a>
@@ -87,14 +93,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </div>
             <div>
                 <div class="label"><span class="label-n">01 /</span> À propos</div>
-                <h2 class="section-h reveal">Vos idées<em> à l'écran.</em></h2>
-                <p class="about-text reveal">
+                <h2 class="section-h section-title reveal">Vos idées<em> à l'écran.</em></h2>
+                <p class="about-text reveal" data-gsap="fade-right">
                     Développeur full-stack basé à <strong>Bruxelles</strong>, je travaille sur des projets qui
                     mêlent logique métier solide et interfaces soignées. Du marketplace B2B aux apps mobiles
                     en passant par les systèmes de billetterie — j'aime les défis qui demandent
                     <strong>autant de réflexion que de code</strong>.
                 </p>
-                <p class="about-text reveal">
+                <p class="about-text reveal" data-gsap="fade-right">
                     Ma stack tourne autour de <strong>Next.js, React et TypeScript</strong>, avec une attention
                     particulière pour la performance et l'expérience utilisateur. J'intègre aussi les stratégies
                     <strong>Google Ads & SEO</strong> pour créer de vraies solutions business, pas juste un fichier.
@@ -142,7 +148,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <section id="process">
         <div class="label reveal"><span class="label-n">02 /</span> Process</div>
-        <h2 class="section-h reveal">Comment je travaille</h2>
+        <h2 class="section-h section-title reveal">Comment je travaille</h2>
         <div class="process-grid">
             <div class="process-item reveal">
                 <div class="process-n">01</div>
@@ -171,20 +177,26 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
     </section>
 
-    <footer>
-        <div class="f-left">
-            <span class="f-logo">LASS</span>
-            <span class="f-copy">© 2026 · Tous droits réservés</span>
-        </div>
-        <div class="f-right">
-            <a href="/about">À propos</a>
-            <a href="/projects">Projets</a>
-            <a href="/skills">Skills</a>
-            <a href="/contact">Contact</a>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <span class="footer-logo">TANUKI CORP.</span>
+                <nav class="footer-nav">
+                    <a href="/about">À propos</a>
+                    <a href="/projects">Projets</a>
+                    <a href="/skills">Skills</a>
+                    <a href="/contact">Contact</a>
+                </nav>
+            </div>
+            <div class="footer-bottom">
+                <span>LASS © 2026 · Tous droits réservés</span>
+                <a href="mailto:contact@tanuki-corporation.com">contact@tanuki-corporation.com</a>
+            </div>
         </div>
     </footer>
 
     <script src="/main.js"></script>
+    <script src="/js/animations.js"></script>
 </body>
 
 </html>

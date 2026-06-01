@@ -18,17 +18,19 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <meta property="og:url" content="https://tanuki-corporation.com/projects">
     <meta property="og:title" content="Projets — Opti-Troc, Yummr & plus | Tanuki Corporation">
     <meta property="og:description" content="Découvrez mes projets : Opti-Troc (marketplace B2B optique), Yummr (app recettes), TNK-Adaptive et autres réalisations web.">
-    <meta property="og:image" content="https://tanuki-corporation.com/img/og-image.jpg">
+    <meta property="og:image" content="https://tanuki-corporation.com/img/og-image.png">
     <meta property="og:locale" content="fr_BE">
     <meta property="og:site_name" content="Tanuki Corporation">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Projets — Tanuki Corporation">
     <meta name="twitter:description" content="Opti-Troc, Yummr, TNK-Adaptive et autres projets web de Lass Tanuki Sempaï.">
-    <meta name="twitter:image" content="https://tanuki-corporation.com/img/og-image.jpg">
+    <meta name="twitter:image" content="https://tanuki-corporation.com/img/og-image.png">
     <title>Projets — Tanuki Sempaï</title>
     <link rel="icon" type="image/png" href="/img/Nouveau projet.png" sizes="32x32">
     <link rel="apple-touch-icon" href="/img/Nouveau projet.png">
     <link rel="stylesheet" href="/css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -70,6 +72,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   ]
 }
     </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 </head>
 
 <body>
@@ -81,16 +85,18 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div id="cur"></div>
     <div id="cur-ring"></div>
 
-    <nav id="nav">
-        <a href="/" class="nav-logo">TANUKI</a>
-        <div class="nav-links">
-            <a href="/about" data-n="01" data-page="/about">À propos</a>
-            <a href="/projects" data-n="02" data-page="/projects">Projets</a>
-            <a href="/skills" data-n="03" data-page="/skills">Skills</a>
-            <a href="/contact" data-n="04" data-page="/contact">Contact</a>
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="/" class="nav-logo">TANUKI</a>
+            <ul class="nav-links">
+                <li><a href="/about" class="nav-link" data-n="01" data-page="/about">À propos</a></li>
+                <li><a href="/projects" class="nav-link" data-n="02" data-page="/projects">Projets</a></li>
+                <li><a href="/skills" class="nav-link" data-n="03" data-page="/skills">Skills</a></li>
+                <li><a href="/contact" class="nav-link" data-n="04" data-page="/contact">Contact</a></li>
+            </ul>
+            <a href="mailto:contact@tanuki-corporation.com" class="nav-cta">Disponible →</a>
+            <button class="nav-toggle" id="navToggle" aria-label="Menu"><span></span><span></span><span></span></button>
         </div>
-        <a href="mailto:contact@tanuki-corporation.com" class="nav-cta">Disponible →</a>
-        <button class="nav-burger" id="navBurger" aria-label="Menu"><span></span><span></span><span></span></button>
     </nav>
     <div class="nav-mobile" id="navMobile">
         <a href="/" data-page="/">Accueil</a>
@@ -105,10 +111,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="proj-header">
             <div>
                 <div class="label"><span class="label-n">02 /</span> Projets sélectionnés</div>
-                <h2 class="section-h reveal" style="margin-bottom:0">Travaux</h2>
+                <h2 class="section-h section-title reveal" style="margin-bottom:0">Travaux</h2>
             </div>
         </div>
-        <div class="proj-strip" id="projStrip">
+        <div class="proj-strip" data-gsap="stagger" id="projStrip">
             <!-- TNK ADAPTIVE -->
             <div class="proj-card big reveal">
                 <div class="proj-thumb">
@@ -273,10 +279,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="proj-header">
             <div>
                 <div class="label"><span class="label-n">02b /</span> Petits projets</div>
-                <h2 class="section-h reveal" style="margin-bottom:0">Widgets</h2>
+                <h2 class="section-h section-title reveal" style="margin-bottom:0">Widgets</h2>
             </div>
         </div>
-        <div class="widgets-grid">
+        <div class="widgets-grid" data-gsap="stagger">
             <div class="widget-card reveal">
                 <div class="proj-thumb">
                     <div class="proj-thumb-bg t-te">GP</div>
@@ -329,10 +335,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="proj-header">
             <div>
                 <div class="label"><span class="label-n">02c /</span> École</div>
-                <h2 class="section-h reveal" style="margin-bottom:0">Travaux d'intégration</h2>
+                <h2 class="section-h section-title reveal" style="margin-bottom:0">Travaux d'intégration</h2>
             </div>
         </div>
-        <div class="widgets-grid">
+        <div class="widgets-grid" data-gsap="stagger">
             <div class="widget-card reveal">
                 <div class="proj-thumb">
                     <div class="proj-thumb-bg t-ot">TI</div>
@@ -391,20 +397,26 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
     </section>
 
-    <footer>
-        <div class="f-left">
-            <span class="f-logo">LASS</span>
-            <span class="f-copy">© 2026 · Tous droits réservés</span>
-        </div>
-        <div class="f-right">
-            <a href="/about">À propos</a>
-            <a href="/projects">Projets</a>
-            <a href="/skills">Skills</a>
-            <a href="/contact">Contact</a>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <span class="footer-logo">TANUKI CORP.</span>
+                <nav class="footer-nav">
+                    <a href="/about">À propos</a>
+                    <a href="/projects">Projets</a>
+                    <a href="/skills">Skills</a>
+                    <a href="/contact">Contact</a>
+                </nav>
+            </div>
+            <div class="footer-bottom">
+                <span>LASS © 2026 · Tous droits réservés</span>
+                <a href="mailto:contact@tanuki-corporation.com">contact@tanuki-corporation.com</a>
+            </div>
         </div>
     </footer>
 
     <script src="/main.js"></script>
+    <script src="/js/animations.js"></script>
 </body>
 
 </html>

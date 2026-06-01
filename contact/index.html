@@ -18,15 +18,17 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <meta property="og:url" content="https://tanuki-corporation.com/contact">
     <meta property="og:title" content="Contact — Travaillons ensemble | Tanuki Corporation">
     <meta property="og:description" content="Vous avez un projet web ? Contactez Lass Tanuki Sempaï, développeur Full-Stack disponible pour missions à Bruxelles et en remote.">
-    <meta property="og:image" content="https://tanuki-corporation.com/img/og-image.jpg">
+    <meta property="og:image" content="https://tanuki-corporation.com/img/og-image.png">
     <meta property="og:locale" content="fr_BE">
     <meta property="og:site_name" content="Tanuki Corporation">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Contact — Tanuki Corporation">
     <meta name="twitter:description" content="Contactez Lass Tanuki Sempaï pour vos projets web à Bruxelles.">
-    <meta name="twitter:image" content="https://tanuki-corporation.com/img/og-image.jpg">
+    <meta name="twitter:image" content="https://tanuki-corporation.com/img/og-image.png">
     <title>Contact — Tanuki Sempaï</title>
     <link rel="stylesheet" href="/css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -48,6 +50,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   "priceRange": "€€"
 }
     </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 </head>
 
 <body>
@@ -59,16 +63,18 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div id="cur"></div>
     <div id="cur-ring"></div>
 
-    <nav id="nav">
-        <a href="/" class="nav-logo">TANUKI</a>
-        <div class="nav-links">
-            <a href="/about" data-n="01" data-page="/about">À propos</a>
-            <a href="/projects" data-n="02" data-page="/projects">Projets</a>
-            <a href="/skills" data-n="03" data-page="/skills">Skills</a>
-            <a href="/contact" data-n="04" data-page="/contact">Contact</a>
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="/" class="nav-logo">TANUKI</a>
+            <ul class="nav-links">
+                <li><a href="/about" class="nav-link" data-n="01" data-page="/about">À propos</a></li>
+                <li><a href="/projects" class="nav-link" data-n="02" data-page="/projects">Projets</a></li>
+                <li><a href="/skills" class="nav-link" data-n="03" data-page="/skills">Skills</a></li>
+                <li><a href="/contact" class="nav-link" data-n="04" data-page="/contact">Contact</a></li>
+            </ul>
+            <a href="mailto:contact@tanuki-corporation.com" class="nav-cta">Disponible →</a>
+            <button class="nav-toggle" id="navToggle" aria-label="Menu"><span></span><span></span><span></span></button>
         </div>
-        <a href="mailto:contact@tanuki-corporation.com" class="nav-cta">Disponible →</a>
-        <button class="nav-burger" id="navBurger" aria-label="Menu"><span></span><span></span><span></span></button>
     </nav>
     <div class="nav-mobile" id="navMobile">
         <a href="/" data-page="/">Accueil</a>
@@ -81,7 +87,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <section id="contact">
         <div class="contact-inner">
-            <div class="contact-left">
+            <div class="contact-left" data-gsap="fade-left">
                 <div class="label reveal"><span class="label-n">05 /</span> Contact</div>
                 <div class="contact-big reveal">TRAVAIL<br><span class="hollow">LONS</span><br>ENSEMBLE<span
                         class="acc">.</span></div>
@@ -89,9 +95,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <em>missions freelance</em> et collaborations.
                 </p>
             </div>
-            <div class="contact-right reveal">
+            <div class="contact-right reveal" data-gsap="fade-right">
                 <div class="contact-email-display"><span>→</span>contact<span>@</span>tanuki-corporation.com</div>
-                <div class="c-btns">
+                <div class="c-btns" data-gsap="stagger">
                     <a href="mailto:contact@tanuki-corporation.com" class="c-btn primary">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
@@ -119,20 +125,26 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
     </section>
 
-    <footer>
-        <div class="f-left">
-            <span class="f-logo">LASS</span>
-            <span class="f-copy">© 2026 · Tous droits réservés</span>
-        </div>
-        <div class="f-right">
-            <a href="/about">À propos</a>
-            <a href="/projects">Projets</a>
-            <a href="/skills">Skills</a>
-            <a href="/contact">Contact</a>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <span class="footer-logo">TANUKI CORP.</span>
+                <nav class="footer-nav">
+                    <a href="/about">À propos</a>
+                    <a href="/projects">Projets</a>
+                    <a href="/skills">Skills</a>
+                    <a href="/contact">Contact</a>
+                </nav>
+            </div>
+            <div class="footer-bottom">
+                <span>LASS © 2026 · Tous droits réservés</span>
+                <a href="mailto:contact@tanuki-corporation.com">contact@tanuki-corporation.com</a>
+            </div>
         </div>
     </footer>
 
     <script src="/main.js"></script>
+    <script src="/js/animations.js"></script>
 </body>
 
 </html>

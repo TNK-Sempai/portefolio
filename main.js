@@ -1,89 +1,12 @@
 // ═══════════════════════════════════════════════════════
-//  TANUKI SEMPAÏ — main.js  v2
-//  Cursor premium · Text scramble · Clip-path reveal
+//  TANUKI SEMPAÏ — main.js  v3
+//  Text scramble · Clip-path reveal
 //  3D tilt cards · Count-up stats · Nav underline slide
+//  (Cursor et nav-toggle gérés par animations.js / GSAP)
 // ═══════════════════════════════════════════════════════
 
-// ─── CURSOR PREMIUM ───────────────────────────────────
-// Ring qui morphe en pill + label contextuel sur les links
-const cur  = document.getElementById('cur');
-const ring = document.getElementById('cur-ring');
-
-// Inject le label dans le ring (une seule fois)
-const curLabel = document.createElement('span');
-curLabel.id = 'cur-label';
-curLabel.style.cssText = `
-  position:absolute; top:50%; left:50%;
-  transform:translate(-50%,-50%);
-  font-family:'DM Mono',monospace;
-  font-size:.48rem; letter-spacing:.18em; text-transform:uppercase;
-  color:#c8f060; opacity:0;
-  transition:opacity .2s; white-space:nowrap; pointer-events:none;
-`;
-if (ring) ring.appendChild(curLabel);
-
-// Styles dynamiques injectés une seule fois
-const curStyle = document.createElement('style');
-curStyle.textContent = `
-  #cur-ring.morphed {
-    width:80px !important; height:28px !important;
-    border-radius:100px !important;
-    border-color:rgba(200,240,96,.5) !important;
-    background:rgba(200,240,96,.06);
-  }
-  #cur-ring.morphed #cur-label { opacity:1 !important; }
-  #cur.hidden { opacity:0 !important; }
-`;
-document.head.appendChild(curStyle);
-
-if (window.matchMedia('(hover:hover) and (pointer:fine)').matches) {
-  let mx = 0, my = 0, rx = 0, ry = 0;
-
-  document.addEventListener('mousemove', e => { mx = e.clientX; my = e.clientY; });
-
-  (function tick() {
-    if (cur)  { cur.style.left = mx + 'px';  cur.style.top = my + 'px'; }
-    rx += (mx - rx) * .11; ry += (my - ry) * .11;
-    if (ring) { ring.style.left = rx + 'px'; ring.style.top = ry + 'px'; }
-    requestAnimationFrame(tick);
-  })();
-
-  // Labels contextuels selon la cible
-  const CURSOR_LABELS = {
-    'a[href]':        'VOIR →',
-    'button':         'CLIC',
-    '.proj-card':     'OUVRIR →',
-    '.widget-card':   'OUVRIR →',
-    '.tech-pill':     null,
-    '.nav-cta':       'CONTACT →',
-    '.proj-link':     'VOIR →',
-    '.c-btn':         'ENVOYER →',
-    '.hero-cta-link': 'DÉCOUVRIR →',
-  };
-
-  document.addEventListener('mouseover', e => {
-    if (!ring || !cur) return;
-    for (const [sel, label] of Object.entries(CURSOR_LABELS)) {
-      if (e.target.closest(sel)) {
-        ring.classList.add('morphed');
-        cur.classList.add('hidden');
-        if (label) curLabel.textContent = label;
-        else curLabel.textContent = '';
-        return;
-      }
-    }
-    ring.classList.remove('morphed');
-    cur.classList.remove('hidden');
-    curLabel.textContent = '';
-  });
-
-} else {
-  if (cur)  cur.style.display  = 'none';
-  if (ring) ring.style.display = 'none';
-}
-
 // ─── NAV SCROLL ───────────────────────────────────────
-const nav = document.getElementById('nav');
+const nav = document.getElementById('navbar') || document.getElementById('nav');
 if (nav) {
   window.addEventListener('scroll', () => {
     nav.classList.toggle('scrolled', scrollY > 60);
@@ -125,24 +48,6 @@ if (nav) {
     underline.style.opacity = '0';
   });
 })();
-
-// ─── HAMBURGER MENU ───────────────────────────────────
-const burger    = document.getElementById('navBurger');
-const navMobile = document.getElementById('navMobile');
-if (burger && navMobile) {
-  burger.addEventListener('click', () => {
-    burger.classList.toggle('open');
-    navMobile.classList.toggle('open');
-    document.body.style.overflow = navMobile.classList.contains('open') ? 'hidden' : '';
-  });
-  navMobile.querySelectorAll('a').forEach(a => {
-    a.addEventListener('click', () => {
-      burger.classList.remove('open');
-      navMobile.classList.remove('open');
-      document.body.style.overflow = '';
-    });
-  });
-}
 
 // ─── TEXT SCRAMBLE (hero title) ───────────────────────
 // Lettres aléatoires qui se fixent une à une — effet terminal

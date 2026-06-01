@@ -20,7 +20,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <meta property="og:url" content="https://tanuki-corporation.com/">
     <meta property="og:title" content="Tanuki Sempaï — Développeur Full-Stack à Bruxelles">
     <meta property="og:description" content="Lass Tanuki Sempaï, développeur Full-Stack & Community Manager à Bruxelles. Création d'expériences digitales sur-mesure avec Next.js, React, TypeScript.">
-    <meta property="og:image" content="https://tanuki-corporation.com/img/og-image.jpg">
+    <meta property="og:image" content="https://tanuki-corporation.com/img/og-image.png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:locale" content="fr_BE">
@@ -28,9 +28,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Tanuki Sempaï — Développeur Full-Stack à Bruxelles">
     <meta name="twitter:description" content="Développeur Full-Stack & Community Manager à Bruxelles. Next.js, React, TypeScript, Supabase.">
-    <meta name="twitter:image" content="https://tanuki-corporation.com/img/og-image.jpg">
+    <meta name="twitter:image" content="https://tanuki-corporation.com/img/og-image.png">
     <title>Tanuki Sempaï — Développeur Full-Stack</title>
     <link rel="stylesheet" href="/css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -71,6 +73,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   ]
 }
     </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 </head>
 
 <body>
@@ -82,16 +86,18 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div id="cur"></div>
     <div id="cur-ring"></div>
 
-    <nav id="nav">
-        <a href="/" class="nav-logo">TANUKI</a>
-        <div class="nav-links">
-            <a href="/about" data-n="01" data-page="/about">À propos</a>
-            <a href="/projects" data-n="02" data-page="/projects">Projets</a>
-            <a href="/skills" data-n="03" data-page="/skills">Skills</a>
-            <a href="/contact" data-n="04" data-page="/contact">Contact</a>
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="/" class="nav-logo">TANUKI</a>
+            <ul class="nav-links">
+                <li><a href="/about" class="nav-link" data-n="01" data-page="/about">À propos</a></li>
+                <li><a href="/projects" class="nav-link" data-n="02" data-page="/projects">Projets</a></li>
+                <li><a href="/skills" class="nav-link" data-n="03" data-page="/skills">Skills</a></li>
+                <li><a href="/contact" class="nav-link" data-n="04" data-page="/contact">Contact</a></li>
+            </ul>
+            <a href="mailto:contact@tanuki-corporation.com" class="nav-cta">Disponible →</a>
+            <button class="nav-toggle" id="navToggle" aria-label="Menu"><span></span><span></span><span></span></button>
         </div>
-        <a href="mailto:contact@tanuki-corporation.com" class="nav-cta">Disponible →</a>
-        <button class="nav-burger" id="navBurger" aria-label="Menu"><span></span><span></span><span></span></button>
     </nav>
     <div class="nav-mobile" id="navMobile">
         <a href="/" data-page="/">Accueil</a>
@@ -102,17 +108,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <a href="mailto:contact@tanuki-corporation.com" class="nav-mobile-cta">Disponible →</a>
     </div>
 
-    <section id="hero">
+    <section id="hero" data-gsap="hero">
         <div class="blob blob-1"></div>
         <div class="blob blob-2"></div>
         <div class="hero-year">2026</div>
         <div class="hero-content">
-            <div class="hero-eyebrow">
+            <div class="hero-eyebrow" data-gsap="hero">
                 <div class="eyebrow-dot"></div>
                 <span class="eyebrow-text">Développeur Full-Stack &amp; Community Management</span>
                 <div class="eyebrow-line"></div>
             </div>
-            <h1 class="hero-title">
+            <h1 class="hero-title" data-gsap="hero">
                 <span class="ht-1">LASS</span>
                 <span class="ht-2">TANUKI</span>
                 <span class="ht-3">
@@ -120,7 +126,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 </span>
             </h1>
         </div>
-        <div class="hero-row">
+        <div class="hero-row" data-gsap="hero">
             <p class="hero-desc">
                 Je conçois et développe des <em>expériences digitales sur-mesure</em> —
                 de l'idée au produit final, avec une obsession pour les détails qui font la différence.
@@ -132,7 +138,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <span class="hero-loc">Bruxelles, Belgique</span>
             </div>
         </div>
-        <div class="hero-cta">
+        <div class="hero-cta" data-gsap="hero">
             <a href="/about" class="hero-cta-link">Découvrir mon profil <span>→</span></a>
         </div>
         <div class="scroll-hint">
@@ -165,20 +171,26 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
     </div>
 
-    <footer>
-        <div class="f-left">
-            <span class="f-logo">LASS</span>
-            <span class="f-copy">© 2026 · Tous droits réservés</span>
-        </div>
-        <div class="f-right">
-            <a href="/about">À propos</a>
-            <a href="/projects">Projets</a>
-            <a href="/skills">Skills</a>
-            <a href="/contact">Contact</a>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <span class="footer-logo">TANUKI CORP.</span>
+                <nav class="footer-nav">
+                    <a href="/about">À propos</a>
+                    <a href="/projects">Projets</a>
+                    <a href="/skills">Skills</a>
+                    <a href="/contact">Contact</a>
+                </nav>
+            </div>
+            <div class="footer-bottom">
+                <span>LASS © 2026 · Tous droits réservés</span>
+                <a href="mailto:contact@tanuki-corporation.com">contact@tanuki-corporation.com</a>
+            </div>
         </div>
     </footer>
 
     <script src="main.js"></script>
+    <script src="/js/animations.js"></script>
 </body>
 
 </html>

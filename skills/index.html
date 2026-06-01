@@ -16,6 +16,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <link rel="canonical" href="https://tanuki-corporation.com/skills">
     <title>Skills — Tanuki Sempaï</title>
     <link rel="stylesheet" href="/css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 </head>
 
 <body>
@@ -27,16 +31,18 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div id="cur"></div>
     <div id="cur-ring"></div>
 
-    <nav id="nav">
-        <a href="/" class="nav-logo">TANUKI</a>
-        <div class="nav-links">
-            <a href="/about" data-n="01" data-page="/about">À propos</a>
-            <a href="/projects" data-n="02" data-page="/projects">Projets</a>
-            <a href="/skills" data-n="03" data-page="/skills">Skills</a>
-            <a href="/contact" data-n="04" data-page="/contact">Contact</a>
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="/" class="nav-logo">TANUKI</a>
+            <ul class="nav-links">
+                <li><a href="/about" class="nav-link" data-n="01" data-page="/about">À propos</a></li>
+                <li><a href="/projects" class="nav-link" data-n="02" data-page="/projects">Projets</a></li>
+                <li><a href="/skills" class="nav-link" data-n="03" data-page="/skills">Skills</a></li>
+                <li><a href="/contact" class="nav-link" data-n="04" data-page="/contact">Contact</a></li>
+            </ul>
+            <a href="mailto:contact@tanuki-corporation.com" class="nav-cta">Disponible →</a>
+            <button class="nav-toggle" id="navToggle" aria-label="Menu"><span></span><span></span><span></span></button>
         </div>
-        <a href="mailto:contact@tanuki-corporation.com" class="nav-cta">Disponible →</a>
-        <button class="nav-burger" id="navBurger" aria-label="Menu"><span></span><span></span><span></span></button>
     </nav>
     <div class="nav-mobile" id="navMobile">
         <a href="/" data-page="/">Accueil</a>
@@ -51,7 +57,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="skills-grid">
             <div class="skill-left">
                 <div class="label reveal"><span class="label-n">03 /</span> Compétences</div>
-                <h2 class="section-h reveal" style="font-size:2.8rem;margin-bottom:1.5rem">Ce que<br><em>je
+                <h2 class="section-h section-title reveal" style="font-size:2.8rem;margin-bottom:1.5rem">Ce que<br><em>je
                         maîtrise</em></h2>
                 <p class="skill-desc reveal">Des technos front aux infras back, j'adapte ma stack au projet et
                     j'apprends vite ce qui manque.</p>
@@ -67,7 +73,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     </div>
                 </div>
             </div>
-            <div class="skill-categories reveal">
+            <div class="skill-categories reveal" data-gsap="stagger">
                 <div class="skill-cat">
                     <div class="skill-cat-title">Frontend</div>
                     <div class="skill-row">
@@ -145,20 +151,26 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
     </section>
 
-    <footer>
-        <div class="f-left">
-            <span class="f-logo">LASS</span>
-            <span class="f-copy">© 2026 · Tous droits réservés</span>
-        </div>
-        <div class="f-right">
-            <a href="/about">À propos</a>
-            <a href="/projects">Projets</a>
-            <a href="/skills">Skills</a>
-            <a href="/contact">Contact</a>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <span class="footer-logo">TANUKI CORP.</span>
+                <nav class="footer-nav">
+                    <a href="/about">À propos</a>
+                    <a href="/projects">Projets</a>
+                    <a href="/skills">Skills</a>
+                    <a href="/contact">Contact</a>
+                </nav>
+            </div>
+            <div class="footer-bottom">
+                <span>LASS © 2026 · Tous droits réservés</span>
+                <a href="mailto:contact@tanuki-corporation.com">contact@tanuki-corporation.com</a>
+            </div>
         </div>
     </footer>
 
     <script src="/main.js"></script>
+    <script src="/js/animations.js"></script>
 </body>
 
 </html>
