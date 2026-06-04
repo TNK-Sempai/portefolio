@@ -190,13 +190,16 @@ gsap.fromTo('body',
 );
 
 /* ─── CURSOR CUSTOM (pages principales) ─── */
-const cursor = document.getElementById('cur');
-const cursorRing = document.getElementById('cur-ring');
-if (cursor && cursorRing) {
-  document.addEventListener('mousemove', e => {
-    gsap.to(cursor, { x: e.clientX, y: e.clientY, duration: 0.1 });
-    gsap.to(cursorRing, { x: e.clientX, y: e.clientY, duration: 0.35 });
-  });
+const isTouchOnly = window.matchMedia('(pointer:coarse)').matches && !window.matchMedia('(pointer:fine)').matches;
+if (!isTouchOnly) {
+  const cursor = document.getElementById('cur');
+  const cursorRing = document.getElementById('cur-ring');
+  if (cursor && cursorRing) {
+    document.addEventListener('mousemove', e => {
+      gsap.to(cursor, { x: e.clientX, y: e.clientY, duration: 0.1 });
+      gsap.to(cursorRing, { x: e.clientX, y: e.clientY, duration: 0.35 });
+    });
+  }
 }
 
 /* ─── FORCE RECALCUL POSITIONS ─── */
