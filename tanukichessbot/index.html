@@ -14,13 +14,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <meta name="description" content="Tanuki Chess Bot — projet de bot d'échecs développé par Lass Tanuki Sempaï avec intelligence artificielle.">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://tanuki-corporation.com/tanukichessbot">
+    <link rel="alternate" hreflang="fr" href="https://tanuki-corporation.com/tanukichessbot" />
+    <link rel="alternate" hreflang="en" href="https://tanuki-corporation.com/tanukichessbot" />
+    <link rel="alternate" hreflang="x-default" href="https://tanuki-corporation.com/tanukichessbot" />
     <title>TanukiChessBot — Tanuki Sempaï</title>
     <link rel="icon" type="image/png" href="/img/Nouveau projet (32).png" sizes="32x32">
     <link rel="apple-touch-icon" href="/img/Nouveau projet (32).png">
     <link rel="stylesheet" href="/css/main.css">
     <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.4.0/model-viewer.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/GLTFLoader.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
     <style>
         .cb-hero {
             min-height: 80vh;
@@ -428,6 +429,104 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 flex-direction: column
             }
         }
+
+        .cb-avatar-card { cursor: pointer }
+        .cb-avatar-preview {
+            width: 100%;
+            aspect-ratio: 1;
+            background: var(--surface2);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: .75rem;
+            transition: background .3s;
+            user-select: none
+        }
+        .cb-avatar-card:hover .cb-avatar-preview { background: rgba(200,240,96,.05) }
+        .cb-avatar-preview-icon { font-size: 4.5rem; pointer-events: none }
+        .cb-avatar-preview-label {
+            font-family: var(--font-mono);
+            font-size: .6rem;
+            letter-spacing: .22em;
+            text-transform: uppercase;
+            color: var(--accent);
+            opacity: .7;
+            pointer-events: none
+        }
+
+        #avatar-modal {
+            position: fixed;
+            inset: 0;
+            z-index: 9000;
+            background: rgba(9,9,14,.96);
+            backdrop-filter: blur(24px);
+            -webkit-backdrop-filter: blur(24px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 300ms ease
+        }
+        #avatar-modal.open { opacity: 1 }
+        .am-viewer-wrap {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1.25rem;
+            transform: scale(.92);
+            transition: transform 300ms ease
+        }
+        #avatar-modal.open .am-viewer-wrap { transform: scale(1) }
+        .am-viewer {
+            width: 80vmin;
+            height: 80vmin;
+            display: block
+        }
+        .am-info { text-align: center }
+        .am-name {
+            font-family: var(--font-display);
+            font-size: clamp(1.4rem, 4vw, 2.2rem);
+            letter-spacing: .14em;
+            color: var(--text)
+        }
+        .am-meta {
+            font-family: var(--font-mono);
+            font-size: .62rem;
+            letter-spacing: .1em;
+            color: var(--muted);
+            margin-top: .2rem
+        }
+        .am-badge {
+            display: inline-block;
+            margin-top: .5rem;
+            font-family: var(--font-display);
+            font-size: .55rem;
+            letter-spacing: .14em;
+            padding: .2rem .6rem;
+            background: var(--accent);
+            color: var(--bg)
+        }
+        .am-badge.soon {
+            background: var(--surface2);
+            color: var(--muted);
+            border: 1px solid var(--border)
+        }
+        .am-close {
+            position: absolute;
+            top: 1.5rem;
+            right: 1.5rem;
+            font-family: var(--font-display);
+            font-size: 2.5rem;
+            color: #c8f060;
+            background: none;
+            border: none;
+            cursor: pointer;
+            line-height: 1;
+            padding: 0;
+            transition: opacity .2s
+        }
+        .am-close:hover { opacity: .7 }
     </style>
 </head>
 
@@ -618,33 +717,33 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="label reveal" data-i18n="chessbot.avatars_label"></div>
         <h2 class="section-h reveal" data-i18n="chessbot.avatars_heading" data-i18n-html="true"></h2>
         <div class="cb-avatars-grid reveal">
-            <div class="cb-avatar-card">
-                <model-viewer class="cb-avatar-canvas" src="assets/models/Tanuki-vr.glb" auto-rotate camera-controls
-                    interaction-prompt="none" environment-image="neutral" shadow-intensity="0.5"
-                    style="width:100%;aspect-ratio:1;background:var(--bg);">
-                </model-viewer>
+            <div class="cb-avatar-card" data-glb="/assets/models/Tanuki-vr.glb">
+                <div class="cb-avatar-preview">
+                    <span class="cb-avatar-preview-icon">🦝</span>
+                    <span class="cb-avatar-preview-label">VIEW 3D</span>
+                </div>
                 <div class="cb-avatar-info">
                     <div class="cb-avatar-name">TANUKI</div>
                     <div class="cb-avatar-meta" data-i18n="chessbot.avatar_tanuki_meta"></div>
                 </div>
                 <div class="cb-avatar-badge" data-i18n="chessbot.badge_active"></div>
             </div>
-            <div class="cb-avatar-card">
-                <model-viewer class="cb-avatar-canvas" src="assets/models/Kitsune.glb" auto-rotate camera-controls
-                    interaction-prompt="none" environment-image="neutral" shadow-intensity="0.5"
-                    style="width:100%;aspect-ratio:1;background:var(--bg);">
-                </model-viewer>
+            <div class="cb-avatar-card" data-glb="/assets/models/Kitsune.glb">
+                <div class="cb-avatar-preview">
+                    <span class="cb-avatar-preview-icon">🦊</span>
+                    <span class="cb-avatar-preview-label">VIEW 3D</span>
+                </div>
                 <div class="cb-avatar-info">
                     <div class="cb-avatar-name">KITSUNE</div>
                     <div class="cb-avatar-meta" data-i18n="chessbot.avatar_kitsune_meta"></div>
                 </div>
                 <div class="cb-avatar-badge soon" data-i18n="chessbot.badge_soon"></div>
             </div>
-            <div class="cb-avatar-card">
-                <model-viewer class="cb-avatar-canvas" src="assets/models/tanuki-street.glb" auto-rotate camera-controls
-                    interaction-prompt="none" environment-image="neutral" shadow-intensity="0.5"
-                    style="width:100%;aspect-ratio:1;background:var(--bg);">
-                </model-viewer>
+            <div class="cb-avatar-card" data-glb="/assets/models/tanuki-street.glb">
+                <div class="cb-avatar-preview">
+                    <span class="cb-avatar-preview-icon">🦝</span>
+                    <span class="cb-avatar-preview-label">VIEW 3D</span>
+                </div>
                 <div class="cb-avatar-info">
                     <div class="cb-avatar-name">TANUKI-CHAN</div>
                     <div class="cb-avatar-meta" data-i18n="chessbot.avatar_chan_meta"></div>
@@ -708,8 +807,63 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         }
         loadLichessStats(); setInterval(loadLichessStats, 30000);
 
-       
-        initAvatar('avatar-tanuki'); initAvatar('avatar-kitsune'); initAvatar('avatar-chan');
+        /* AVATAR MODAL */
+        (function () {
+            document.querySelectorAll('.cb-avatar-card').forEach(function (card) {
+                card.addEventListener('click', function () {
+                    var glb      = card.dataset.glb;
+                    var name     = card.querySelector('.cb-avatar-name').textContent;
+                    var meta     = card.querySelector('.cb-avatar-meta').textContent;
+                    var badgeEl  = card.querySelector('.cb-avatar-badge');
+                    var badgeTxt = badgeEl.textContent;
+                    var isSoon   = badgeEl.classList.contains('soon');
+                    openModal(glb, name, meta, badgeTxt, isSoon);
+                });
+            });
+
+            function openModal(glb, name, meta, badgeTxt, isSoon) {
+                var existing = document.getElementById('avatar-modal');
+                if (existing) existing.remove();
+
+                var modal = document.createElement('div');
+                modal.id = 'avatar-modal';
+                modal.innerHTML =
+                    '<button class="am-close" id="amClose">×</button>' +
+                    '<div class="am-viewer-wrap">' +
+                        '<model-viewer class="am-viewer" src="' + glb + '" auto-rotate camera-controls ' +
+                            'interaction-prompt="none" environment-image="neutral" shadow-intensity="0.5">' +
+                        '</model-viewer>' +
+                        '<div class="am-info">' +
+                            '<div class="am-name">' + name + '</div>' +
+                            '<div class="am-meta">' + meta + '</div>' +
+                            '<div class="am-badge' + (isSoon ? ' soon' : '') + '">' + badgeTxt + '</div>' +
+                        '</div>' +
+                    '</div>';
+
+                document.body.appendChild(modal);
+                requestAnimationFrame(function () {
+                    requestAnimationFrame(function () { modal.classList.add('open'); });
+                });
+
+                document.getElementById('amClose').addEventListener('click', closeModal);
+                modal.addEventListener('click', function (e) { if (e.target === modal) closeModal(); });
+                document.addEventListener('keydown', onEsc);
+                document.body.style.overflow = 'hidden';
+            }
+
+            function closeModal() {
+                var modal = document.getElementById('avatar-modal');
+                if (!modal) return;
+                modal.classList.remove('open');
+                document.removeEventListener('keydown', onEsc);
+                setTimeout(function () {
+                    modal.remove();
+                    document.body.style.overflow = '';
+                }, 300);
+            }
+
+            function onEsc(e) { if (e.key === 'Escape') closeModal(); }
+        })();
     </script>
     <script src="/i18n.js"></script>
 </body>
