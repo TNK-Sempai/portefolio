@@ -92,22 +92,22 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="nav-container">
             <a href="/" class="nav-logo">TANUKI</a>
             <ul class="nav-links">
-                <li><a href="/about" class="nav-link" data-n="01" data-page="/about">À propos</a></li>
-                <li><a href="/projects" class="nav-link" data-n="02" data-page="/projects">Projets</a></li>
-                <li><a href="/skills" class="nav-link" data-n="03" data-page="/skills">Skills</a></li>
-                <li><a href="/contact" class="nav-link" data-n="04" data-page="/contact">Contact</a></li>
+                <li><a href="/about" class="nav-link" data-n="01" data-page="/about" data-i18n="nav.about"></a></li>
+                <li><a href="/projects" class="nav-link" data-n="02" data-page="/projects" data-i18n="nav.projects"></a></li>
+                <li><a href="/skills" class="nav-link" data-n="03" data-page="/skills" data-i18n="nav.skills"></a></li>
+                <li><a href="/contact" class="nav-link" data-n="04" data-page="/contact" data-i18n="nav.contact"></a></li>
             </ul>
-            <a href="mailto:contact@tanuki-corporation.com" class="nav-cta">Disponible →</a>
+            <a href="mailto:contact@tanuki-corporation.com" class="nav-cta" data-i18n="nav.available"></a>
             <button class="nav-toggle" id="navToggle" aria-label="Menu"><span></span><span></span><span></span></button>
         </div>
     </nav>
     <div class="nav-mobile" id="navMobile">
-        <a href="/" data-page="/">Accueil</a>
-        <a href="/about" data-page="/about">À propos</a>
-        <a href="/projects" data-page="/projects">Projets</a>
-        <a href="/skills" data-page="/skills">Skills</a>
-        <a href="/contact" data-page="/contact">Contact</a>
-        <a href="mailto:contact@tanuki-corporation.com" class="nav-mobile-cta">Disponible →</a>
+        <a href="/" data-page="/" data-i18n="nav.home"></a>
+        <a href="/about" data-page="/about" data-i18n="nav.about"></a>
+        <a href="/projects" data-page="/projects" data-i18n="nav.projects"></a>
+        <a href="/skills" data-page="/skills" data-i18n="nav.skills"></a>
+        <a href="/contact" data-page="/contact" data-i18n="nav.contact"></a>
+        <a href="mailto:contact@tanuki-corporation.com" class="nav-mobile-cta" data-i18n="nav.available"></a>
     </div>
 
     <section id="hero" data-gsap="hero">
@@ -117,7 +117,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="hero-content">
             <div class="hero-eyebrow" data-gsap="hero">
                 <div class="eyebrow-dot"></div>
-                <span class="eyebrow-text">Développeur Full-Stack &amp; Community Management</span>
+                <span class="eyebrow-text" data-i18n="hero.eyebrow"></span>
                 <div class="eyebrow-line"></div>
             </div>
             <h1 class="hero-title" data-gsap="hero">
@@ -129,22 +129,19 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </h1>
         </div>
         <div class="hero-row" data-gsap="hero">
-            <p class="hero-desc">
-                Je conçois et développe des <em>expériences digitales sur-mesure</em> —
-                de l'idée au produit final, avec une obsession pour les détails qui font la différence.
-            </p>
+            <p class="hero-desc" data-i18n="hero.desc" data-i18n-html="true"></p>
             <div class="hero-meta">
                 <div class="hero-avail">
-                    <div class="avail-pulse"></div>Disponible pour missions
+                    <div class="avail-pulse"></div><span data-i18n="hero.available"></span>
                 </div>
-                <span class="hero-loc">Bruxelles, Belgique</span>
+                <span class="hero-loc" data-i18n="hero.location"></span>
             </div>
         </div>
         <div class="hero-cta" data-gsap="hero">
-            <a href="/about" class="hero-cta-link">Découvrir mon profil <span>→</span></a>
+            <a href="/about" class="hero-cta-link"><span data-i18n="hero.cta"></span> <span>→</span></a>
         </div>
         <div class="scroll-hint">
-            <span>Scroll</span>
+            <span data-i18n="hero.scroll"></span>
             <div class="scroll-track"></div>
         </div>
     </section>
@@ -178,14 +175,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <div class="footer-top">
                 <span class="footer-logo">TANUKI CORP.</span>
                 <nav class="footer-nav">
-                    <a href="/about">À propos</a>
-                    <a href="/projects">Projets</a>
-                    <a href="/skills">Skills</a>
-                    <a href="/contact">Contact</a>
+                    <a href="/about" data-i18n="nav.about"></a>
+                    <a href="/projects" data-i18n="nav.projects"></a>
+                    <a href="/skills" data-i18n="nav.skills"></a>
+                    <a href="/contact" data-i18n="nav.contact"></a>
                 </nav>
             </div>
             <div class="footer-bottom">
-                <span>LASS © 2026 · Tous droits réservés</span>
+                <span data-i18n="footer.rights"></span>
                 <a href="mailto:contact@tanuki-corporation.com">contact@tanuki-corporation.com</a>
             </div>
         </div>
@@ -193,6 +190,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <script src="main.js"></script>
     <script src="/js/animations.js"></script>
+    <script src="/i18n.js"></script>
 </body>
 
 </html>

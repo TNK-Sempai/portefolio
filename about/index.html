@@ -48,22 +48,22 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="nav-container">
             <a href="/" class="nav-logo">TANUKI</a>
             <ul class="nav-links">
-                <li><a href="/about" class="nav-link" data-n="01" data-page="/about">À propos</a></li>
-                <li><a href="/projects" class="nav-link" data-n="02" data-page="/projects">Projets</a></li>
-                <li><a href="/skills" class="nav-link" data-n="03" data-page="/skills">Skills</a></li>
-                <li><a href="/contact" class="nav-link" data-n="04" data-page="/contact">Contact</a></li>
+                <li><a href="/about" class="nav-link" data-n="01" data-page="/about" data-i18n="nav.about"></a></li>
+                <li><a href="/projects" class="nav-link" data-n="02" data-page="/projects" data-i18n="nav.projects"></a></li>
+                <li><a href="/skills" class="nav-link" data-n="03" data-page="/skills" data-i18n="nav.skills"></a></li>
+                <li><a href="/contact" class="nav-link" data-n="04" data-page="/contact" data-i18n="nav.contact"></a></li>
             </ul>
-            <a href="mailto:contact@tanuki-corporation.com" class="nav-cta">Disponible →</a>
+            <a href="mailto:contact@tanuki-corporation.com" class="nav-cta" data-i18n="nav.available"></a>
             <button class="nav-toggle" id="navToggle" aria-label="Menu"><span></span><span></span><span></span></button>
         </div>
     </nav>
     <div class="nav-mobile" id="navMobile">
-        <a href="/" data-page="/">Accueil</a>
-        <a href="/about" data-page="/about">À propos</a>
-        <a href="/projects" data-page="/projects">Projets</a>
-        <a href="/skills" data-page="/skills">Skills</a>
-        <a href="/contact" data-page="/contact">Contact</a>
-        <a href="mailto:contact@tanuki-corporation.com" class="nav-mobile-cta">Disponible →</a>
+        <a href="/" data-page="/" data-i18n="nav.home"></a>
+        <a href="/about" data-page="/about" data-i18n="nav.about"></a>
+        <a href="/projects" data-page="/projects" data-i18n="nav.projects"></a>
+        <a href="/skills" data-page="/skills" data-i18n="nav.skills"></a>
+        <a href="/contact" data-page="/contact" data-i18n="nav.contact"></a>
+        <a href="mailto:contact@tanuki-corporation.com" class="nav-mobile-cta" data-i18n="nav.available"></a>
     </div>
 
     <section id="about">
@@ -85,62 +85,53 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <div class="portrait-stats">
                     <div class="pstat">
                         <div class="pstat-n">4<sup>+</sup></div>
-                        <div class="pstat-l">Années exp.</div>
+                        <div class="pstat-l" data-i18n="about.stat_years"></div>
                     </div>
                     <div class="pstat">
                         <div class="pstat-n">7<sup>+</sup></div>
-                        <div class="pstat-l">Projets livrés</div>
+                        <div class="pstat-l" data-i18n="about.stat_projects"></div>
                     </div>
                 </div>
             </div>
             <div>
-                <div class="label"><span class="label-n">01 /</span> À propos</div>
-                <h2 class="section-h section-title reveal">Vos idées<em> à l'écran.</em></h2>
-                <p class="about-text reveal" data-gsap="fade-right">
-                    Développeur full-stack basé à <strong>Bruxelles</strong>, je travaille sur des projets qui
-                    mêlent logique métier solide et interfaces soignées. Du marketplace B2B aux apps mobiles
-                    en passant par les systèmes de billetterie — j'aime les défis qui demandent
-                    <strong>autant de réflexion que de code</strong>.
-                </p>
-                <p class="about-text reveal" data-gsap="fade-right">
-                    Ma stack tourne autour de <strong>Next.js, React et TypeScript</strong>, avec une attention
-                    particulière pour la performance et l'expérience utilisateur. J'intègre aussi les stratégies
-                    <strong>Google Ads & SEO</strong> pour créer de vraies solutions business, pas juste un fichier.
-                </p>
+                <div class="label" data-i18n="about.label"></div>
+                <h2 class="section-h section-title reveal" data-i18n="about.heading" data-i18n-html="true"></h2>
+                <p class="about-text reveal" data-gsap="fade-right" data-i18n="about.text_1" data-i18n-html="true"></p>
+                <p class="about-text reveal" data-gsap="fade-right" data-i18n="about.text_2" data-i18n-html="true"></p>
                 <div class="timeline reveal">
                     <div class="t-item">
                         <div class="t-year">2026</div>
                         <div>
-                            <div class="t-title">Tanuki Chess Bot</div>
-                            <div class="t-sub">Bot IA autonome qui joue aux échecs 24/7 sur Twitch — Stockfish, Ollama, avatar 3D animé, synthèse vocale.</div>
+                            <div class="t-title" data-i18n="about.timeline.chessbot_title"></div>
+                            <div class="t-sub" data-i18n="about.timeline.chessbot_sub"></div>
                         </div>
                     </div>
                     <div class="t-item">
                         <div class="t-year">2026</div>
                         <div>
-                            <div class="t-title">Opti-Troc — Création & Développement</div>
-                            <div class="t-sub">Créer à partir d'une discussion entre proches</div>
+                            <div class="t-title" data-i18n="about.timeline.optitroc_title"></div>
+                            <div class="t-sub" data-i18n="about.timeline.optitroc_sub"></div>
                         </div>
                     </div>
                     <div class="t-item">
                         <div class="t-year">2026</div>
                         <div>
-                            <div class="t-title">Yummr — Actuellement en développement</div>
-                            <div class="t-sub">React Native · Next.js · shadcn/ui</div>
+                            <div class="t-title" data-i18n="about.timeline.yummr_title"></div>
+                            <div class="t-sub" data-i18n="about.timeline.yummr_sub"></div>
                         </div>
                     </div>
                     <div class="t-item">
                         <div class="t-year">2021</div>
                         <div>
-                            <div class="t-title">Time-Event.ch — Plateforme billetterie</div>
-                            <div class="t-sub">Accompagnement, Refonte CMS, Campagnes Ads & Méta Ads</div>
+                            <div class="t-title" data-i18n="about.timeline.timeevent_title"></div>
+                            <div class="t-sub" data-i18n="about.timeline.timeevent_sub"></div>
                         </div>
                     </div>
                     <div class="t-item">
                         <div class="t-year">2021</div>
                         <div>
-                            <div class="t-title">Big Factory Corp ASBL</div>
-                            <div class="t-sub">Développement culturel et Accompagnement d'artistes</div>
+                            <div class="t-title" data-i18n="about.timeline.bigfactory_title"></div>
+                            <div class="t-sub" data-i18n="about.timeline.bigfactory_sub"></div>
                         </div>
                     </div>
                 </div>
@@ -149,32 +140,28 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </section>
 
     <section id="process">
-        <div class="label reveal"><span class="label-n">02 /</span> Process</div>
-        <h2 class="section-h section-title reveal">Comment je travaille</h2>
+        <div class="label reveal" data-i18n="about.process_label"></div>
+        <h2 class="section-h section-title reveal" data-i18n="about.process_heading"></h2>
         <div class="process-grid">
             <div class="process-item reveal">
                 <div class="process-n">01</div>
-                <div class="process-title">Écoute & Stratégie</div>
-                <p class="process-text">On commence par comprendre ton contexte, tes contraintes et ce que tu veux
-                    vraiment accomplir. Pas de solution avant de connaître le problème.</p>
+                <div class="process-title" data-i18n="about.step1_title"></div>
+                <p class="process-text" data-i18n="about.step1_text"></p>
             </div>
             <div class="process-item reveal">
                 <div class="process-n">02</div>
-                <div class="process-title">Design & Architecture</div>
-                <p class="process-text">Wireframes, choix techniques, structure de données. Je construis une base solide
-                    avant d'écrire une ligne de code.</p>
+                <div class="process-title" data-i18n="about.step2_title"></div>
+                <p class="process-text" data-i18n="about.step2_text"></p>
             </div>
             <div class="process-item reveal">
                 <div class="process-n">03</div>
-                <div class="process-title">Développement itératif</div>
-                <p class="process-text">Livraisons régulières, feedback continu. Tu vois le produit prendre forme à
-                    chaque sprint, sans mauvaises surprises.</p>
+                <div class="process-title" data-i18n="about.step3_title"></div>
+                <p class="process-text" data-i18n="about.step3_text"></p>
             </div>
             <div class="process-item reveal">
                 <div class="process-n">04</div>
-                <div class="process-title">Launch & Suivi</div>
-                <p class="process-text">Déploiement propre, docs claires, suivi post-launch. Je ne disparais pas après
-                    la livraison.</p>
+                <div class="process-title" data-i18n="about.step4_title"></div>
+                <p class="process-text" data-i18n="about.step4_text"></p>
             </div>
         </div>
     </section>
@@ -184,14 +171,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <div class="footer-top">
                 <span class="footer-logo">TANUKI CORP.</span>
                 <nav class="footer-nav">
-                    <a href="/about">À propos</a>
-                    <a href="/projects">Projets</a>
-                    <a href="/skills">Skills</a>
-                    <a href="/contact">Contact</a>
+                    <a href="/about" data-i18n="nav.about"></a>
+                    <a href="/projects" data-i18n="nav.projects"></a>
+                    <a href="/skills" data-i18n="nav.skills"></a>
+                    <a href="/contact" data-i18n="nav.contact"></a>
                 </nav>
             </div>
             <div class="footer-bottom">
-                <span>LASS © 2026 · Tous droits réservés</span>
+                <span data-i18n="footer.rights"></span>
                 <a href="mailto:contact@tanuki-corporation.com">contact@tanuki-corporation.com</a>
             </div>
         </div>
@@ -199,6 +186,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <script src="/main.js"></script>
     <script src="/js/animations.js"></script>
+    <script src="/i18n.js"></script>
 </body>
 
 </html>

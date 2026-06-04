@@ -37,34 +37,32 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="nav-container">
             <a href="/" class="nav-logo">TANUKI</a>
             <ul class="nav-links">
-                <li><a href="/about" class="nav-link" data-n="01" data-page="/about">À propos</a></li>
-                <li><a href="/projects" class="nav-link" data-n="02" data-page="/projects">Projets</a></li>
-                <li><a href="/skills" class="nav-link" data-n="03" data-page="/skills">Skills</a></li>
-                <li><a href="/contact" class="nav-link" data-n="04" data-page="/contact">Contact</a></li>
+                <li><a href="/about" class="nav-link" data-n="01" data-page="/about" data-i18n="nav.about"></a></li>
+                <li><a href="/projects" class="nav-link" data-n="02" data-page="/projects" data-i18n="nav.projects"></a></li>
+                <li><a href="/skills" class="nav-link" data-n="03" data-page="/skills" data-i18n="nav.skills"></a></li>
+                <li><a href="/contact" class="nav-link" data-n="04" data-page="/contact" data-i18n="nav.contact"></a></li>
             </ul>
-            <a href="mailto:contact@tanuki-corporation.com" class="nav-cta">Disponible →</a>
+            <a href="mailto:contact@tanuki-corporation.com" class="nav-cta" data-i18n="nav.available"></a>
             <button class="nav-toggle" id="navToggle" aria-label="Menu"><span></span><span></span><span></span></button>
         </div>
     </nav>
     <div class="nav-mobile" id="navMobile">
-        <a href="/" data-page="/">Accueil</a>
-        <a href="/about" data-page="/about">À propos</a>
-        <a href="/projects" data-page="/projects">Projets</a>
-        <a href="/skills" data-page="/skills">Skills</a>
-        <a href="/contact" data-page="/contact">Contact</a>
-        <a href="mailto:contact@tanuki-corporation.com" class="nav-mobile-cta">Disponible →</a>
+        <a href="/" data-page="/" data-i18n="nav.home"></a>
+        <a href="/about" data-page="/about" data-i18n="nav.about"></a>
+        <a href="/projects" data-page="/projects" data-i18n="nav.projects"></a>
+        <a href="/skills" data-page="/skills" data-i18n="nav.skills"></a>
+        <a href="/contact" data-page="/contact" data-i18n="nav.contact"></a>
+        <a href="mailto:contact@tanuki-corporation.com" class="nav-mobile-cta" data-i18n="nav.available"></a>
     </div>
 
     <section id="skills">
         <div class="skills-grid">
             <div class="skill-left">
-                <div class="label reveal"><span class="label-n">03 /</span> Compétences</div>
-                <h2 class="section-h section-title reveal" style="font-size:2.8rem;margin-bottom:1.5rem">Ce que<br><em>je
-                        maîtrise</em></h2>
-                <p class="skill-desc reveal">Des technos front aux infras back, j'adapte ma stack au projet et
-                    j'apprends vite ce qui manque.</p>
+                <div class="label reveal" data-i18n="skills.label"></div>
+                <h2 class="section-h section-title reveal" style="font-size:2.8rem;margin-bottom:1.5rem" data-i18n="skills.heading" data-i18n-html="true"></h2>
+                <p class="skill-desc reveal" data-i18n="skills.desc"></p>
                 <div class="tech-grid reveal">
-                    <div class="tech-grid-title">Outils & Écosystème</div>
+                    <div class="tech-grid-title" data-i18n="skills.tools_title"></div>
                     <div class="tech-pills">
                         <span class="tech-pill">Git & GitHub</span><span class="tech-pill">Vite</span>
                         <span class="tech-pill">Vercel</span><span class="tech-pill">Figma</span>
@@ -77,10 +75,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </div>
             <div class="skill-categories reveal" data-gsap="stagger">
                 <div class="skill-cat">
-                    <div class="skill-cat-title">Frontend</div>
+                    <div class="skill-cat-title" data-i18n="skills.cat_frontend"></div>
                     <div class="skill-row">
-                        <div class="skill-name-wrap"><span class="skill-name">React / Next.js</span><span
-                                class="skill-sub">App Router, SSR, SSG</span></div>
+                        <div class="skill-name-wrap"><span class="skill-name">React / Next.js</span><span class="skill-sub" data-i18n="skills.skill_react_sub"></span></div>
                         <div class="bar-outer">
                             <div class="bar-inner" data-w="92"></div>
                         </div>
@@ -92,8 +89,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         </div>
                     </div>
                     <div class="skill-row">
-                        <div class="skill-name-wrap"><span class="skill-name">CSS / Tailwind</span><span
-                                class="skill-sub">Animations, Responsive</span></div>
+                        <div class="skill-name-wrap"><span class="skill-name">CSS / Tailwind</span><span class="skill-sub" data-i18n="skills.skill_css_sub"></span></div>
                         <div class="bar-outer">
                             <div class="bar-inner" data-w="90"></div>
                         </div>
@@ -106,7 +102,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     </div>
                 </div>
                 <div class="skill-cat">
-                    <div class="skill-cat-title">Backend & Data</div>
+                    <div class="skill-cat-title" data-i18n="skills.cat_backend"></div>
                     <div class="skill-row">
                         <div class="skill-name-wrap"><span class="skill-name">Node.js / Express</span></div>
                         <div class="bar-outer">
@@ -127,10 +123,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     </div>
                 </div>
                 <div class="skill-cat">
-                    <div class="skill-cat-title">Marketing & Analytics</div>
+                    <div class="skill-cat-title" data-i18n="skills.cat_marketing"></div>
                     <div class="skill-row">
-                        <div class="skill-name-wrap"><span class="skill-name">Google Ads</span><span
-                                class="skill-sub">Search, Display, Remarketing</span></div>
+                        <div class="skill-name-wrap"><span class="skill-name">Google Ads</span><span class="skill-sub" data-i18n="skills.skill_ads_sub"></span></div>
                         <div class="bar-outer">
                             <div class="bar-inner b3" data-w="78"></div>
                         </div>
@@ -142,8 +137,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         </div>
                     </div>
                     <div class="skill-row">
-                        <div class="skill-name-wrap"><span class="skill-name">Consent Mode v2</span><span
-                                class="skill-sub">RGPD, GTM</span></div>
+                        <div class="skill-name-wrap"><span class="skill-name">Consent Mode v2</span><span class="skill-sub" data-i18n="skills.skill_consent_sub"></span></div>
                         <div class="bar-outer">
                             <div class="bar-inner b3" data-w="80"></div>
                         </div>
@@ -158,14 +152,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <div class="footer-top">
                 <span class="footer-logo">TANUKI CORP.</span>
                 <nav class="footer-nav">
-                    <a href="/about">À propos</a>
-                    <a href="/projects">Projets</a>
-                    <a href="/skills">Skills</a>
-                    <a href="/contact">Contact</a>
+                    <a href="/about" data-i18n="nav.about"></a>
+                    <a href="/projects" data-i18n="nav.projects"></a>
+                    <a href="/skills" data-i18n="nav.skills"></a>
+                    <a href="/contact" data-i18n="nav.contact"></a>
                 </nav>
             </div>
             <div class="footer-bottom">
-                <span>LASS © 2026 · Tous droits réservés</span>
+                <span data-i18n="footer.rights"></span>
                 <a href="mailto:contact@tanuki-corporation.com">contact@tanuki-corporation.com</a>
             </div>
         </div>
@@ -173,6 +167,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <script src="/main.js"></script>
     <script src="/js/animations.js"></script>
+    <script src="/i18n.js"></script>
 </body>
 
 </html>

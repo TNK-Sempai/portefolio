@@ -69,33 +69,30 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="nav-container">
             <a href="/" class="nav-logo">TANUKI</a>
             <ul class="nav-links">
-                <li><a href="/about" class="nav-link" data-n="01" data-page="/about">À propos</a></li>
-                <li><a href="/projects" class="nav-link" data-n="02" data-page="/projects">Projets</a></li>
-                <li><a href="/skills" class="nav-link" data-n="03" data-page="/skills">Skills</a></li>
-                <li><a href="/contact" class="nav-link" data-n="04" data-page="/contact">Contact</a></li>
+                <li><a href="/about" class="nav-link" data-n="01" data-page="/about" data-i18n="nav.about"></a></li>
+                <li><a href="/projects" class="nav-link" data-n="02" data-page="/projects" data-i18n="nav.projects"></a></li>
+                <li><a href="/skills" class="nav-link" data-n="03" data-page="/skills" data-i18n="nav.skills"></a></li>
+                <li><a href="/contact" class="nav-link" data-n="04" data-page="/contact" data-i18n="nav.contact"></a></li>
             </ul>
-            <a href="mailto:contact@tanuki-corporation.com" class="nav-cta">Disponible →</a>
+            <a href="mailto:contact@tanuki-corporation.com" class="nav-cta" data-i18n="nav.available"></a>
             <button class="nav-toggle" id="navToggle" aria-label="Menu"><span></span><span></span><span></span></button>
         </div>
     </nav>
     <div class="nav-mobile" id="navMobile">
-        <a href="/" data-page="/">Accueil</a>
-        <a href="/about" data-page="/about">À propos</a>
-        <a href="/projects" data-page="/projects">Projets</a>
-        <a href="/skills" data-page="/skills">Skills</a>
-        <a href="/contact" data-page="/contact">Contact</a>
-        <a href="mailto:contact@tanuki-corporation.com" class="nav-mobile-cta">Disponible →</a>
+        <a href="/" data-page="/" data-i18n="nav.home"></a>
+        <a href="/about" data-page="/about" data-i18n="nav.about"></a>
+        <a href="/projects" data-page="/projects" data-i18n="nav.projects"></a>
+        <a href="/skills" data-page="/skills" data-i18n="nav.skills"></a>
+        <a href="/contact" data-page="/contact" data-i18n="nav.contact"></a>
+        <a href="mailto:contact@tanuki-corporation.com" class="nav-mobile-cta" data-i18n="nav.available"></a>
     </div>
 
     <section id="contact">
         <div class="contact-inner">
             <div class="contact-left" data-gsap="fade-left">
-                <div class="label reveal"><span class="label-n">05 /</span> Contact</div>
-                <div class="contact-big reveal">TRAVAIL<br><span class="hollow">LONS</span><br>ENSEMBLE<span
-                        class="acc">.</span></div>
-                <p class="contact-copy reveal">Un projet en tête ? Une idée à creuser ? Je suis disponible pour des
-                    <em>missions freelance</em> et collaborations.
-                </p>
+                <div class="label reveal" data-i18n="contact.label"></div>
+                <div class="contact-big reveal"><span data-i18n="contact.heading_1"></span><br><span class="hollow" data-i18n="contact.heading_2"></span><br><span data-i18n="contact.heading_3"></span><span class="acc">.</span></div>
+                <p class="contact-copy reveal" data-i18n="contact.copy" data-i18n-html="true"></p>
             </div>
             <div class="contact-right reveal" data-gsap="fade-right">
                 <div class="contact-email-display"><span>→</span>contact<span>@</span>tanuki-corporation.com</div>
@@ -105,7 +102,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                             <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
                             <polyline points="22,6 12,13 2,6" />
                         </svg>
-                        <span class="c-btn-label">Envoyer un email</span><span class="c-btn-arrow">→</span>
+                        <span class="c-btn-label" data-i18n="contact.send_email"></span><span class="c-btn-arrow">→</span>
                     </a>
                     <a href="https://www.linkedin.com/in/meidhy-ali-oussalah-15a982229/" class="c-btn" target="_blank">
                         <svg viewBox="0 0 24 24" fill="currentColor">
@@ -132,14 +129,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <div class="footer-top">
                 <span class="footer-logo">TANUKI CORP.</span>
                 <nav class="footer-nav">
-                    <a href="/about">À propos</a>
-                    <a href="/projects">Projets</a>
-                    <a href="/skills">Skills</a>
-                    <a href="/contact">Contact</a>
+                    <a href="/about" data-i18n="nav.about"></a>
+                    <a href="/projects" data-i18n="nav.projects"></a>
+                    <a href="/skills" data-i18n="nav.skills"></a>
+                    <a href="/contact" data-i18n="nav.contact"></a>
                 </nav>
             </div>
             <div class="footer-bottom">
-                <span>LASS © 2026 · Tous droits réservés</span>
+                <span data-i18n="footer.rights"></span>
                 <a href="mailto:contact@tanuki-corporation.com">contact@tanuki-corporation.com</a>
             </div>
         </div>
@@ -147,6 +144,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <script src="/main.js"></script>
     <script src="/js/animations.js"></script>
+    <script src="/i18n.js"></script>
 </body>
 
 </html>

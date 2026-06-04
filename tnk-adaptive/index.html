@@ -32,21 +32,21 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <nav id="nav">
         <a href="/" class="nav-logo">TANUKI</a>
         <div class="nav-links">
-            <a href="/about" data-n="01" data-page="/about">À propos</a>
-            <a href="/projects" data-n="02" data-page="/projects">Projets</a>
-            <a href="/skills" data-n="03" data-page="/skills">Skills</a>
-            <a href="/contact" data-n="04" data-page="/contact">Contact</a>
+            <a href="/about" data-n="01" data-page="/about" data-i18n="nav.about"></a>
+            <a href="/projects" data-n="02" data-page="/projects" data-i18n="nav.projects"></a>
+            <a href="/skills" data-n="03" data-page="/skills" data-i18n="nav.skills"></a>
+            <a href="/contact" data-n="04" data-page="/contact" data-i18n="nav.contact"></a>
         </div>
-        <a href="mailto:contact@tanuki-corporation.com" class="nav-cta">Disponible →</a>
+        <a href="mailto:contact@tanuki-corporation.com" class="nav-cta" data-i18n="nav.available"></a>
         <button class="nav-burger" id="navBurger" aria-label="Menu"><span></span><span></span><span></span></button>
     </nav>
     <div class="nav-mobile" id="navMobile">
-        <a href="/" data-page="/">Accueil</a>
-        <a href="/about" data-page="/about">À propos</a>
-        <a href="/projects" data-page="/projects">Projets</a>
-        <a href="/skills" data-page="/skills">Skills</a>
-        <a href="/contact" data-page="/contact">Contact</a>
-        <a href="mailto:contact@tanuki-corporation.com" class="nav-mobile-cta">Disponible →</a>
+        <a href="/" data-page="/" data-i18n="nav.home"></a>
+        <a href="/about" data-page="/about" data-i18n="nav.about"></a>
+        <a href="/projects" data-page="/projects" data-i18n="nav.projects"></a>
+        <a href="/skills" data-page="/skills" data-i18n="nav.skills"></a>
+        <a href="/contact" data-page="/contact" data-i18n="nav.contact"></a>
+        <a href="mailto:contact@tanuki-corporation.com" class="nav-mobile-cta" data-i18n="nav.available"></a>
     </div>
 
     <!-- ─── HERO ─── -->
@@ -56,12 +56,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="ta-hero-content">
             <div class="ta-eyebrow">
                 <div class="ta-eyebrow-dot"></div>
-                <span class="ta-eyebrow-text">Paper trading algorithmique</span>
+                <span class="ta-eyebrow-text" data-i18n="tnk_adaptive.eyebrow"></span>
                 <div class="ta-eyebrow-line"></div>
             </div>
             <h1 class="ta-title">TNK<span> ADAPTIVE</span></h1>
-            <p class="ta-subtitle">Bot de paper trading multi-paires auto-adaptatif</p>
-            <div class="ta-meta">Tanuki Corporation · 2026</div>
+            <p class="ta-subtitle" data-i18n="tnk_adaptive.subtitle"></p>
+            <div class="ta-meta" data-i18n="tnk_adaptive.meta"></div>
             <div class="ta-hero-pills">
                 <span class="ta-pill">Python</span>
                 <span class="ta-pill">Flask</span>
@@ -71,67 +71,64 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </div>
             <div class="ta-live-badge">
                 <span class="ta-live-dot"></span>
-                BOT ACTIF · PAPER
+                <span data-i18n="tnk_adaptive.badge"></span>
             </div>
             <div class="ta-hero-ctas">
                 <a href="https://irrigation-southampton-sisters-minus.trycloudflare.com" target="_blank"
-                    class="ta-cta">Voir la démo live →</a>
-                <a href="https://github.com/TNK-Sempai/TNK-ADAPTIVE" target="_blank" class="ta-cta ghost">GitHub ↗</a>
+                    class="ta-cta" data-i18n="tnk_adaptive.cta_demo"></a>
+                <a href="https://github.com/TNK-Sempai/TNK-ADAPTIVE" target="_blank" class="ta-cta ghost" data-i18n="tnk_adaptive.cta_github"></a>
             </div>
         </div>
     </section>
 
     <!-- ─── 01 · LE PROJET ─── -->
     <section class="ta-section">
-        <div class="label reveal"><span class="label-n">01 /</span> Le projet</div>
-        <h2 class="section-h reveal">Un bot qui<em> apprend.</em></h2>
+        <div class="label reveal" data-i18n="tnk_adaptive.project_label"></div>
+        <h2 class="section-h reveal" data-i18n="tnk_adaptive.project_heading" data-i18n-html="true"></h2>
         <p class="reveal"
             style="max-width:680px;color:var(--muted2);font-size:.95rem;line-height:1.9;border-left:1px solid rgba(200,240,96,.2);padding-left:1.5rem;">
-            TNK Adaptive est un bot de trading algorithmique open source qui surveille en temps réel le top 50 paires
-            USDT par volume sur Bybit, détecte des signaux d'entrée via RSI + Moving Averages, et apprend
-            automatiquement de ses propres performances.
+            <span data-i18n="tnk_adaptive.project_text"></span>
         </p>
     </section>
 
     <!-- ─── 02 · CE QUE ÇA FAIT ─── -->
     <section class="ta-section alt">
-        <div class="label reveal"><span class="label-n">02 /</span> Fonctionnalités</div>
-        <h2 class="section-h reveal">Ce que<em> ça fait.</em></h2>
+        <div class="label reveal" data-i18n="tnk_adaptive.features_label"></div>
+        <h2 class="section-h reveal" data-i18n="tnk_adaptive.features_heading" data-i18n-html="true"></h2>
         <div class="ta-features reveal">
             <div class="ta-feat">
                 <div class="ta-feat-icon">👁</div>
-                <h4>SURVEILLANCE</h4>
-                <p>Top 50 paires USDT, mis à jour toutes les 5 minutes. Suivi en temps réel des volumes et des
-                    mouvements de marché.</p>
+                <h4 data-i18n="tnk_adaptive.feat_watch"></h4>
+                <p data-i18n="tnk_adaptive.feat_watch_desc"></p>
             </div>
             <div class="ta-feat">
                 <div class="ta-feat-icon">🎯</div>
-                <h4>STRATÉGIE</h4>
-                <p>RSI(14) + MA croisement. Long/Short automatiques. Stop Loss&nbsp;-3%, Take Profit&nbsp;+6%.</p>
+                <h4 data-i18n="tnk_adaptive.feat_strategy"></h4>
+                <p data-i18n="tnk_adaptive.feat_strategy_desc"></p>
             </div>
             <div class="ta-feat">
                 <div class="ta-feat-icon">🧠</div>
-                <h4>APPRENTISSAGE</h4>
-                <p>Après 10 trades par paire, ajuste RSI, SL et TP selon win rate. Le bot s'améliore en continu.</p>
+                <h4 data-i18n="tnk_adaptive.feat_learn"></h4>
+                <p data-i18n="tnk_adaptive.feat_learn_desc"></p>
             </div>
             <div class="ta-feat">
                 <div class="ta-feat-icon">📊</div>
-                <h4>DASHBOARD</h4>
-                <p>Chandelles TradingView en temps réel, positions live, historique complet des trades.</p>
+                <h4 data-i18n="tnk_adaptive.feat_dashboard"></h4>
+                <p data-i18n="tnk_adaptive.feat_dashboard_desc"></p>
             </div>
         </div>
     </section>
 
     <!-- ─── 03 · COMMENT IL APPREND ─── -->
     <section class="ta-section">
-        <div class="label reveal"><span class="label-n">03 /</span> Moteur adaptatif</div>
-        <h2 class="section-h reveal">Comment il<em> apprend.</em></h2>
+        <div class="label reveal" data-i18n="tnk_adaptive.engine_label"></div>
+        <h2 class="section-h reveal" data-i18n="tnk_adaptive.engine_heading" data-i18n-html="true"></h2>
         <div class="ta-table-wrap reveal">
             <table class="ta-table">
                 <thead>
                     <tr>
-                        <th>Condition</th>
-                        <th>Ajustement automatique</th>
+                        <th data-i18n="tnk_adaptive.col_condition"></th>
+                        <th data-i18n="tnk_adaptive.col_adjustment"></th>
                     </tr>
                 </thead>
                 <tbody>
@@ -162,8 +159,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <!-- ─── 04 · STACK TECHNIQUE ─── -->
     <section class="ta-section alt">
-        <div class="label reveal"><span class="label-n">04 /</span> Stack technique</div>
-        <h2 class="section-h reveal">Sous le<em> capot.</em></h2>
+        <div class="label reveal" data-i18n="tnk_adaptive.stack_label"></div>
+        <h2 class="section-h reveal" data-i18n="tnk_adaptive.stack_heading" data-i18n-html="true"></h2>
         <div class="ta-stack reveal">
             <div class="ta-stack-item">
                 <h4>Python</h4>
@@ -202,12 +199,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <!-- ─── 05 · INSTALLATION ─── -->
     <section class="ta-section">
-        <div class="label reveal"><span class="label-n">05 /</span> Installation rapide</div>
-        <h2 class="section-h reveal">Démarrer<em> en 60 secondes.</em></h2>
+        <div class="label reveal" data-i18n="tnk_adaptive.install_label"></div>
+        <h2 class="section-h reveal" data-i18n="tnk_adaptive.install_heading" data-i18n-html="true"></h2>
         <div class="ta-code-wrap reveal">
             <div class="ta-code-header">
                 <span class="ta-code-label">bash</span>
-                <button class="ta-copy-btn" id="copyBtn" onclick="copyInstall()">Copier</button>
+                <button class="ta-copy-btn" id="copyBtn" onclick="copyInstall()" data-i18n="tnk_adaptive.copy_btn"></button>
             </div>
             <pre><code id="installCode">git clone https://github.com/TNK-Sempai/TNK-ADAPTIVE.git
 cd TNK-ADAPTIVE
@@ -217,15 +214,15 @@ python main.py
         </div>
         <p class="reveal"
             style="margin-top:1.5rem;font-family:var(--font-mono);font-size:.72rem;letter-spacing:.08em;color:var(--muted);display:flex;flex-wrap:wrap;gap:1.5rem;">
-            <span><span style="color:var(--accent);">✓</span>&nbsp; Aucune clé API requise.</span>
-            <span><span style="color:var(--accent);">✓</span>&nbsp; Aucun risque financier.</span>
+            <span data-i18n="tnk_adaptive.no_api"></span>
+            <span data-i18n="tnk_adaptive.no_risk"></span>
         </p>
     </section>
 
     <!-- ─── 06 · ROADMAP ─── -->
     <section class="ta-section alt">
-        <div class="label reveal"><span class="label-n">06 /</span> Roadmap</div>
-        <h2 class="section-h reveal">Ce qui<em> arrive.</em></h2>
+        <div class="label reveal" data-i18n="tnk_adaptive.roadmap_label"></div>
+        <h2 class="section-h reveal" data-i18n="tnk_adaptive.roadmap_heading" data-i18n-html="true"></h2>
         <ul class="ta-roadmap reveal">
             <li class="done"><span class="ta-rm-icon">✅</span> Paper trading multi-paires</li>
             <li class="done"><span class="ta-rm-icon">✅</span> Dashboard chandelles live</li>
@@ -240,8 +237,8 @@ python main.py
 
     <!-- ─── 07 · DASHBOARD LIVE ─── -->
     <section class="ta-section">
-        <div class="label reveal"><span class="label-n">07 /</span> En direct</div>
-        <h2 class="section-h reveal">Le<em> dashboard.</em></h2>
+        <div class="label reveal" data-i18n="tnk_adaptive.dashboard_label"></div>
+        <h2 class="section-h reveal" data-i18n="tnk_adaptive.dashboard_heading" data-i18n-html="true"></h2>
         <div class="ta-demo-wrap reveal">
             <iframe src="https://irrigation-southampton-sisters-minus.trycloudflare.com" frameborder="0"
                 style="width:100%;aspect-ratio:16/9;min-height:300px;display:block;" allowfullscreen loading="lazy">
@@ -251,8 +248,8 @@ python main.py
 
     <!-- ─── 08 · SUPPORT ─── -->
     <section class="ta-section alt">
-        <div class="label reveal"><span class="label-n">08 /</span> Support</div>
-        <h2 class="section-h reveal">Soutenir<em> le projet.</em></h2>
+        <div class="label reveal" data-i18n="tnk_adaptive.support_label"></div>
+        <h2 class="section-h reveal" data-i18n="tnk_adaptive.support_heading" data-i18n-html="true"></h2>
         <div class="ta-support-grid reveal">
             <div class="ta-wallet">
                 <div class="ta-wallet-label">Ko-fi</div>
@@ -269,7 +266,7 @@ python main.py
                         <rect x="9" y="9" width="13" height="13" rx="2" />
                         <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1" />
                     </svg>
-                    Copier l'adresse
+                    <span data-i18n="tnk_adaptive.copy_address"></span>
                 </button>
             </div>
             <div class="ta-wallet">
@@ -281,7 +278,7 @@ python main.py
                         <rect x="9" y="9" width="13" height="13" rx="2" />
                         <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1" />
                     </svg>
-                    Copier l'adresse
+                    <span data-i18n="tnk_adaptive.copy_address"></span>
                 </button>
             </div>
             <div class="ta-wallet">
@@ -293,7 +290,7 @@ python main.py
                         <rect x="9" y="9" width="13" height="13" rx="2" />
                         <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1" />
                     </svg>
-                    Copier l'adresse
+                    <span data-i18n="tnk_adaptive.copy_address"></span>
                 </button>
             </div>
         </div>
@@ -304,25 +301,30 @@ python main.py
         style="padding:2rem 3.5rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;border-top:1px solid var(--border);">
         <a href="/projects"
             style="font-family:var(--font-mono);font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);text-decoration:none;transition:opacity .2s;"
-            onmouseover="this.style.opacity='.7'" onmouseout="this.style.opacity='1'">← Retour aux projets</a>
-        <span style="font-family:var(--font-mono);font-size:.62rem;letter-spacing:.1em;color:var(--muted);">⚠️ Projet
-            éducatif. Pas un conseil financier.</span>
+            onmouseover="this.style.opacity='.7'" onmouseout="this.style.opacity='1'"><span data-i18n="tnk_adaptive.back"></span></a>
+        <span style="font-family:var(--font-mono);font-size:.62rem;letter-spacing:.1em;color:var(--muted);"><span data-i18n="tnk_adaptive.disclaimer"></span></span>
     </section>
 
-    <footer>
-        <div class="f-left">
-            <span class="f-logo">LASS</span>
-            <span class="f-copy">© 2026 · Tous droits réservés</span>
-        </div>
-        <div class="f-right">
-            <a href="/about">À propos</a>
-            <a href="/projects">Projets</a>
-            <a href="/skills">Skills</a>
-            <a href="/contact">Contact</a>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <span class="footer-logo">TANUKI CORP.</span>
+                <nav class="footer-nav">
+                    <a href="/about" data-i18n="nav.about"></a>
+                    <a href="/projects" data-i18n="nav.projects"></a>
+                    <a href="/skills" data-i18n="nav.skills"></a>
+                    <a href="/contact" data-i18n="nav.contact"></a>
+                </nav>
+            </div>
+            <div class="footer-bottom">
+                <span data-i18n="footer.rights"></span>
+                <a href="mailto:contact@tanuki-corporation.com">contact@tanuki-corporation.com</a>
+            </div>
         </div>
     </footer>
 
     <script src="/main.js"></script>
+    <script src="/i18n.js"></script>
     <script>
         function copyInstall() {
             const raw = `git clone https://github.com/TNK-Sempai/TNK-ADAPTIVE.git\ncd TNK-ADAPTIVE\npython -m pip install -r requirements.txt\npython main.py\n# Dashboard → http://localhost:5000`;

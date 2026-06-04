@@ -89,29 +89,29 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="nav-container">
             <a href="/" class="nav-logo">TANUKI</a>
             <ul class="nav-links">
-                <li><a href="/about" class="nav-link" data-n="01" data-page="/about">À propos</a></li>
-                <li><a href="/projects" class="nav-link" data-n="02" data-page="/projects">Projets</a></li>
-                <li><a href="/skills" class="nav-link" data-n="03" data-page="/skills">Skills</a></li>
-                <li><a href="/contact" class="nav-link" data-n="04" data-page="/contact">Contact</a></li>
+                <li><a href="/about" class="nav-link" data-n="01" data-page="/about" data-i18n="nav.about"></a></li>
+                <li><a href="/projects" class="nav-link" data-n="02" data-page="/projects" data-i18n="nav.projects"></a></li>
+                <li><a href="/skills" class="nav-link" data-n="03" data-page="/skills" data-i18n="nav.skills"></a></li>
+                <li><a href="/contact" class="nav-link" data-n="04" data-page="/contact" data-i18n="nav.contact"></a></li>
             </ul>
-            <a href="mailto:contact@tanuki-corporation.com" class="nav-cta">Disponible →</a>
+            <a href="mailto:contact@tanuki-corporation.com" class="nav-cta" data-i18n="nav.available"></a>
             <button class="nav-toggle" id="navToggle" aria-label="Menu"><span></span><span></span><span></span></button>
         </div>
     </nav>
     <div class="nav-mobile" id="navMobile">
-        <a href="/" data-page="/">Accueil</a>
-        <a href="/about" data-page="/about">À propos</a>
-        <a href="/projects" data-page="/projects">Projets</a>
-        <a href="/skills" data-page="/skills">Skills</a>
-        <a href="/contact" data-page="/contact">Contact</a>
-        <a href="mailto:contact@tanuki-corporation.com" class="nav-mobile-cta">Disponible →</a>
+        <a href="/" data-page="/" data-i18n="nav.home"></a>
+        <a href="/about" data-page="/about" data-i18n="nav.about"></a>
+        <a href="/projects" data-page="/projects" data-i18n="nav.projects"></a>
+        <a href="/skills" data-page="/skills" data-i18n="nav.skills"></a>
+        <a href="/contact" data-page="/contact" data-i18n="nav.contact"></a>
+        <a href="mailto:contact@tanuki-corporation.com" class="nav-mobile-cta" data-i18n="nav.available"></a>
     </div>
 
     <section id="projects">
         <div class="proj-header">
             <div>
-                <div class="label"><span class="label-n">02 /</span> Projets sélectionnés</div>
-                <h2 class="section-h section-title reveal" style="margin-bottom:0">Travaux</h2>
+                <div class="label" data-i18n="projects.label"></div>
+                <h2 class="section-h section-title reveal" style="margin-bottom:0" data-i18n="projects.heading"></h2>
             </div>
         </div>
         <div class="proj-strip" data-gsap="stagger" id="projStrip">
@@ -133,10 +133,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         <span class="proj-tag">Python</span>
                         <span class="proj-tag">Paper</span>
                     </div>
-                    <div class="proj-name">TNK Adaptive</div>
-                    <p class="proj-desc">Bot de trading algorithmique multi-paires auto-adaptatif. Surveille le top 50
-                        paires USDT sur Bybit, apprend de ses propres trades et ajuste ses paramètres automatiquement.
-                    </p>
+                    <div class="proj-name" data-i18n="projects.tnk_adaptive.name"></div>
+                    <p class="proj-desc" data-i18n="projects.tnk_adaptive.desc"></p>
                     <div class="proj-tags" style="margin-top:.75rem;">
                         <span class="proj-tag"
                             style="border-color:rgba(200,240,96,.18);color:rgba(200,240,96,.65);">Python</span>
@@ -150,7 +148,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                             style="border-color:rgba(200,240,96,.18);color:rgba(200,240,96,.65);">TradingView</span>
                     </div>
                     <div class="proj-foot">
-                        <a href="/tnk-adaptive" class="proj-link">Voir le projet <svg viewBox="0 0 24 24"
+                        <a href="/tnk-adaptive" class="proj-link"><span data-i18n="projects.see_project"></span> <svg viewBox="0 0 24 24"
                                 fill="none" stroke="currentColor" stroke-width="2">
                                 <path d="M5 12h14M12 5l7 7-7 7" />
                             </svg></a>
@@ -159,7 +157,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <div
                         style="display:flex;gap:1.2rem;margin-top:.65rem;padding-top:.65rem;border-top:1px solid var(--border);">
                         <a href="https://irrigation-southampton-sisters-minus.trycloudflare.com" target="_blank"
-                            class="proj-link" style="color:var(--muted);font-size:.62rem;gap:.35rem;">Live Demo <svg
+                            class="proj-link" style="color:var(--muted);font-size:.62rem;gap:.35rem;"><span data-i18n="projects.live_demo"></span> <svg
                                 viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                                 style="width:11px;height:11px;">
                                 <path
@@ -184,10 +182,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <div class="proj-body">
                     <div class="proj-tags"><span class="proj-tag">Python</span><span class="proj-tag">IA</span><span
                             class="proj-tag">Lichess</span><span class="proj-tag">Twitch</span></div>
-                    <div class="proj-name">Tanuki Chess Bot</div>
-                    <p class="proj-desc">Bot IA autonome qui joue aux échecs 24/7 sur Twitch — Stockfish, Ollama, avatar
-                        3D animé, synthèse vocale.</p>
-                    <div class="proj-foot"><a href="/tanukichessbot" class="proj-link">Voir le projet <svg
+                    <div class="proj-name" data-i18n="projects.chessbot.name"></div>
+                    <p class="proj-desc" data-i18n="projects.chessbot.desc"></p>
+                    <div class="proj-foot"><a href="/tanukichessbot" class="proj-link"><span data-i18n="projects.see_project"></span> <svg
                                 viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <path d="M5 12h14M12 5l7 7-7 7" />
                             </svg></a><span class="proj-year">2026</span></div>
@@ -203,9 +200,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <div class="proj-body">
                     <div class="proj-tags"><span class="proj-tag">Next.js</span><span class="proj-tag">B2B</span><span
                             class="proj-tag">Marketplace</span><span class="proj-tag">Sécurité</span></div>
-                    <div class="proj-name">Opti-Troc</div>
-                    <p class="proj-desc">Marketplace B2B pour l'équipement optique professionnel. Authentification
-                        robuste, système d'annonces, de messagerie, UI complète en utilisant builder et figma.</p>
+                    <div class="proj-name" data-i18n="projects.optitroc.name"></div>
+                    <p class="proj-desc" data-i18n="projects.optitroc.desc"></p>
                     <div class="proj-foot"><a href="https://opti-troc.vercel.app/" class="proj-link"
                             target="_blank">Voir le projet <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
                                 stroke-width="2">
@@ -222,10 +218,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <div class="proj-body">
                     <div class="proj-tags"><span class="proj-tag">React Native</span><span class="proj-tag">App
                             Mobile</span></div>
-                    <div class="proj-name">Yummr</div>
-                    <p class="proj-desc">L'app "Tinder" des recettes — match pour éviter les salades et les prises de
-                        têtes.</p>
-                    <div class="proj-foot"><a href="#" class="proj-link">Bientôt disponible <svg viewBox="0 0 24 24"
+                    <div class="proj-name" data-i18n="projects.yummr.name"></div>
+                    <p class="proj-desc" data-i18n="projects.yummr.desc"></p>
+                    <div class="proj-foot"><a href="#" class="proj-link"><span data-i18n="projects.soon"></span> <svg viewBox="0 0 24 24"
                                 fill="none" stroke="currentColor" stroke-width="2">
                                 <path d="M5 12h14M12 5l7 7-7 7" />
                             </svg></a><span class="proj-year">2026</span></div>
@@ -241,9 +236,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <div class="proj-body">
                     <div class="proj-tags"><span class="proj-tag">Next.js</span><span
                             class="proj-tag">TypeScript</span><span class="proj-tag">shadcn/ui</span></div>
-                    <div class="proj-name">Big Factory</div>
-                    <p class="proj-desc">Association de développement culturel basés à Bruxelles et Paris, création
-                        totale du site.</p>
+                    <div class="proj-name" data-i18n="projects.bigfactory.name"></div>
+                    <p class="proj-desc" data-i18n="projects.bigfactory.desc"></p>
                     <div class="proj-foot"><a href="https://bigfactory-nine.vercel.app/" class="proj-link">Voir le
                             projet <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <path d="M5 12h14M12 5l7 7-7 7" />
@@ -259,9 +253,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <div class="proj-body">
                     <div class="proj-tags"><span class="proj-tag">Web</span><span class="proj-tag">Google
                             Ads</span><span class="proj-tag">Billetterie</span></div>
-                    <div class="proj-name">Time-Event.ch</div>
-                    <p class="proj-desc">Plateforme événementielle pour le Théâtre du Martolet, Saint-Maurice. Consent
-                        Mode v2, tracking conversions, campagnes Ads.</p>
+                    <div class="proj-name" data-i18n="projects.timeevent.name"></div>
+                    <p class="proj-desc" data-i18n="projects.timeevent.desc"></p>
                     <div class="proj-foot"><a href="https://time-event.ch" class="proj-link" target="_blank">Voir le
                             site <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <path d="M5 12h14M12 5l7 7-7 7" />
@@ -271,15 +264,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
         <div class="strip-hint reveal">
             <div class="strip-arrow"><span id="prev">←</span><span id="next">→</span></div>
-            Swipe ou utilise les flèches
+            <span data-i18n="projects.strip_hint"></span>
         </div>
     </section>
 
     <section id="widgets">
         <div class="proj-header">
             <div>
-                <div class="label"><span class="label-n">02b /</span> Petits projets</div>
-                <h2 class="section-h section-title reveal" style="margin-bottom:0">Widgets</h2>
+                <div class="label" data-i18n="projects.widgets_label"></div>
+                <h2 class="section-h section-title reveal" style="margin-bottom:0" data-i18n="projects.widgets_heading"></h2>
             </div>
         </div>
         <div class="widgets-grid" data-gsap="stagger">
@@ -290,9 +283,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <div class="proj-body">
                     <div class="proj-tags"><span class="proj-tag">Javascript</span><span class="proj-tag">Script</span>
                     </div>
-                    <div class="proj-name">Générateur de palette</div>
-                    <p class="proj-desc">Plateforme de création de palette de couleurs.</p>
-                    <div class="proj-foot"><a href="/palette.html" class="proj-link" target="_blank">Voir le widget <svg
+                    <div class="proj-name" data-i18n="projects.palette.name"></div>
+                    <p class="proj-desc" data-i18n="projects.palette.desc"></p>
+                    <div class="proj-foot"><a href="/palette.html" class="proj-link" target="_blank"><span data-i18n="projects.see_widget"></span> <svg
                                 viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <path d="M5 12h14M12 5l7 7-7 7" />
                             </svg></a><span class="proj-year">2026</span></div>
@@ -305,9 +298,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <div class="proj-body">
                     <div class="proj-tags"><span class="proj-tag">Javascript</span><span class="proj-tag">Script</span>
                     </div>
-                    <div class="proj-name">Compteur JS</div>
-                    <p class="proj-desc">Compteur interactif en JavaScript pur.</p>
-                    <div class="proj-foot"><a href="/compteur.html" class="proj-link" target="_blank">Voir le widget <svg
+                    <div class="proj-name" data-i18n="projects.counter.name"></div>
+                    <p class="proj-desc" data-i18n="projects.counter.desc"></p>
+                    <div class="proj-foot"><a href="/compteur.html" class="proj-link" target="_blank"><span data-i18n="projects.see_widget"></span> <svg
                                 viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <path d="M5 12h14M12 5l7 7-7 7" />
                             </svg></a><span class="proj-year">2026</span></div>
@@ -320,8 +313,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <div class="proj-body">
                     <div class="proj-tags"><span class="proj-tag">Javascript</span><span class="proj-tag">Script</span>
                     </div>
-                    <div class="proj-name">Calculatrice pour Monique</div>
-                    <p class="proj-desc">Une calculatrice dédiée à Monique, faite avec amour.</p>
+                    <div class="proj-name" data-i18n="projects.calculator.name"></div>
+                    <p class="proj-desc" data-i18n="projects.calculator.desc"></p>
                     <div class="proj-foot"><a href="/uneCalculatricePourMoniqueV2.html" class="proj-link"
                             target="_blank">Voir le widget <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
                                 stroke-width="2">
@@ -334,8 +327,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <section id="ti">
         <div class="proj-header">
             <div>
-                <div class="label"><span class="label-n">02c /</span> École</div>
-                <h2 class="section-h section-title reveal" style="margin-bottom:0">Travaux d'intégration</h2>
+                <div class="label" data-i18n="projects.school_label"></div>
+                <h2 class="section-h section-title reveal" style="margin-bottom:0" data-i18n="projects.school_heading"></h2>
             </div>
         </div>
         <div class="widgets-grid" data-gsap="stagger">
@@ -346,9 +339,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <div class="proj-body">
                     <div class="proj-tags"><span class="proj-tag">HTML</span><span class="proj-tag">CSS</span><span
                             class="proj-tag">Préformation</span></div>
-                    <div class="proj-name">TI Préformation</div>
-                    <p class="proj-desc">Travail d'intégration réalisé en préformation — site complet livré de A à Z.
-                    </p>
+                    <div class="proj-name" data-i18n="projects.ti1.name"></div>
+                    <p class="proj-desc" data-i18n="projects.ti1.desc"></p>
                     <div class="proj-foot"><a href="https://tnk-sempai.github.io/TI-Prefo/index.html" class="proj-link"
                             target="_blank">Voir le projet <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
                                 stroke-width="2">
@@ -363,12 +355,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <div class="proj-body">
                     <div class="proj-tags"><span class="proj-tag">HTML</span><span class="proj-tag">CSS</span><span
                             class="proj-tag">JS</span><span class="proj-tag">48h</span></div>
-                    <div class="proj-name">TI Paris</div>
-                    <p class="proj-desc">2 jours de code from scratch, sans aucune assistance — exercice de pur
-                        développement sous contrainte.</p>
+                    <div class="proj-name" data-i18n="projects.ti_paris.name"></div>
+                    <p class="proj-desc" data-i18n="projects.ti_paris.desc"></p>
                     <div class="proj-foot"><a
                             href="https://2026.webdev-cf2m.be/Stagiaires/meidhy/T.I./TI1_Meidhy/public/"
-                            class="proj-link" target="_blank">Voir le projet <svg viewBox="0 0 24 24" fill="none"
+                            class="proj-link" target="_blank"><span data-i18n="projects.see_project"></span> <svg viewBox="0 0 24 24" fill="none"
                                 stroke="currentColor" stroke-width="2">
                                 <path d="M5 12h14M12 5l7 7-7 7" />
                             </svg></a><span class="proj-year">2026</span></div>
@@ -382,12 +373,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <div class="proj-body">
                     <div class="proj-tags"><span class="proj-tag">PHP</span><span class="proj-tag">JS</span><span
                             class="proj-tag">HTML-CSS</span><span class="proj-tag">SQL</span></div>
-                    <div class="proj-name">TI 2 - Livre d'or</div>
-                    <p class="proj-desc">Livre d'or full-stack en MVC procédural — formulaire validé JS/PHP, PDO
-                        sécurisé, pagination et dark mode.</p>
+                    <div class="proj-name" data-i18n="projects.ti2.name"></div>
+                    <p class="proj-desc" data-i18n="projects.ti2.desc"></p>
                     <div class="proj-foot">
                     <a  href="https://2026.webdev-cf2m.be/Stagiaires/meidhy/T.I./TI2-2026"
-                        class="proj-link" target="_blank">Voir le projet<svg viewBox="0 0 24 24" fill="none"
+                        class="proj-link" target="_blank"><span data-i18n="projects.see_project"></span><svg viewBox="0 0 24 24" fill="none"
                             stroke="currentColor" stroke-width="2">
                             <path d="M5 12h14M12 5l7 7-7 7" />
                         </svg></a><span class="proj-year">2026</span></div>
@@ -402,14 +392,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <div class="footer-top">
                 <span class="footer-logo">TANUKI CORP.</span>
                 <nav class="footer-nav">
-                    <a href="/about">À propos</a>
-                    <a href="/projects">Projets</a>
-                    <a href="/skills">Skills</a>
-                    <a href="/contact">Contact</a>
+                    <a href="/about" data-i18n="nav.about"></a>
+                    <a href="/projects" data-i18n="nav.projects"></a>
+                    <a href="/skills" data-i18n="nav.skills"></a>
+                    <a href="/contact" data-i18n="nav.contact"></a>
                 </nav>
             </div>
             <div class="footer-bottom">
-                <span>LASS © 2026 · Tous droits réservés</span>
+                <span data-i18n="footer.rights"></span>
                 <a href="mailto:contact@tanuki-corporation.com">contact@tanuki-corporation.com</a>
             </div>
         </div>
@@ -417,6 +407,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <script src="/main.js"></script>
     <script src="/js/animations.js"></script>
+    <script src="/i18n.js"></script>
 </body>
 
 </html>

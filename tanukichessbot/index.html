@@ -444,22 +444,22 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="nav-container">
             <a href="/" class="nav-logo">TANUKI</a>
             <ul class="nav-links">
-                <li><a href="/about" class="nav-link" data-n="01" data-page="/about">À propos</a></li>
-                <li><a href="/projects" class="nav-link" data-n="02" data-page="/projects">Projets</a></li>
-                <li><a href="/skills" class="nav-link" data-n="03" data-page="/skills">Skills</a></li>
-                <li><a href="/contact" class="nav-link" data-n="04" data-page="/contact">Contact</a></li>
+                <li><a href="/about" class="nav-link" data-n="01" data-page="/about" data-i18n="nav.about"></a></li>
+                <li><a href="/projects" class="nav-link" data-n="02" data-page="/projects" data-i18n="nav.projects"></a></li>
+                <li><a href="/skills" class="nav-link" data-n="03" data-page="/skills" data-i18n="nav.skills"></a></li>
+                <li><a href="/contact" class="nav-link" data-n="04" data-page="/contact" data-i18n="nav.contact"></a></li>
             </ul>
-            <a href="mailto:contact@tanuki-corporation.com" class="nav-cta">Disponible →</a>
+            <a href="mailto:contact@tanuki-corporation.com" class="nav-cta" data-i18n="nav.available"></a>
             <button class="nav-toggle" id="navToggle" aria-label="Menu"><span></span><span></span><span></span></button>
         </div>
     </nav>
     <div class="nav-mobile" id="navMobile">
-        <a href="/" data-page="/">Accueil</a>
-        <a href="/about" data-page="/about">À propos</a>
-        <a href="/projects" data-page="/projects">Projets</a>
-        <a href="/skills" data-page="/skills">Skills</a>
-        <a href="/contact" data-page="/contact">Contact</a>
-        <a href="mailto:contact@tanuki-corporation.com" class="nav-mobile-cta">Disponible →</a>
+        <a href="/" data-page="/" data-i18n="nav.home"></a>
+        <a href="/about" data-page="/about" data-i18n="nav.about"></a>
+        <a href="/projects" data-page="/projects" data-i18n="nav.projects"></a>
+        <a href="/skills" data-page="/skills" data-i18n="nav.skills"></a>
+        <a href="/contact" data-page="/contact" data-i18n="nav.contact"></a>
+        <a href="mailto:contact@tanuki-corporation.com" class="nav-mobile-cta" data-i18n="nav.available"></a>
     </div>
 
     <!-- HERO -->
@@ -468,86 +468,79 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="cb-hero-content">
             <div class="cb-eyebrow">
                 <div class="cb-eyebrow-dot"></div>
-                <span class="cb-eyebrow-text">Stream autonome 24/7</span>
+                <span class="cb-eyebrow-text" data-i18n="chessbot.eyebrow"></span>
                 <div class="cb-eyebrow-line"></div>
             </div>
             <h1 class="cb-title">TANUKI<span>CHESS</span>BOT</h1>
-            <p class="cb-subtitle">Une IA qui joue aux échecs, commente chaque coup à voix haute, anime un avatar 3D et
-                gère le chat Twitch — sans aucune intervention humaine.</p>
-            <a href="https://twitch.tv/tanukicorporation" target="_blank" class="cb-hero-cta">Regarder en live →</a>
+            <p class="cb-subtitle" data-i18n="chessbot.subtitle"></p>
+            <a href="https://twitch.tv/tanukicorporation" target="_blank" class="cb-hero-cta"><span data-i18n="chessbot.watch_live"></span></a>
         </div>
         <div class="cb-live-badge">
             <div class="cb-live-dot" id="liveDot"></div>
-            <span id="liveLabel">VÉRIFICATION...</span>
+            <span id="liveLabel" data-i18n="chessbot.checking"></span>
         </div>
         <div class="cb-stats">
             <div class="cb-stat">
                 <div class="cb-stat-num" id="sTotal">—</div>
-                <div class="cb-stat-label">Parties jouées</div>
+                <div class="cb-stat-label" data-i18n="chessbot.stat_played"></div>
             </div>
             <div class="cb-stat">
                 <div class="cb-stat-num" id="sWins">—</div>
-                <div class="cb-stat-label">Victoires</div>
+                <div class="cb-stat-label" data-i18n="chessbot.stat_wins"></div>
             </div>
             <div class="cb-stat">
                 <div class="cb-stat-num" id="sLosses">—</div>
-                <div class="cb-stat-label">Défaites</div>
+                <div class="cb-stat-label" data-i18n="chessbot.stat_losses"></div>
             </div>
             <div class="cb-stat">
                 <div class="cb-stat-num" id="sDraws">—</div>
-                <div class="cb-stat-label">Nuls</div>
+                <div class="cb-stat-label" data-i18n="chessbot.stat_draws"></div>
             </div>
         </div>
     </section>
 
     <!-- ABOUT -->
     <section class="cb-section">
-        <div class="label reveal"><span class="label-n">01 /</span> Le projet</div>
-        <h2 class="section-h reveal">Un bot<em> entièrement autonome.</em></h2>
+        <div class="label reveal" data-i18n="chessbot.project_label"></div>
+        <h2 class="section-h reveal" data-i18n="chessbot.project_heading" data-i18n-html="true"></h2>
         <div class="cb-about-grid">
             <div class="cb-about-text reveal">
-                <p><strong>TanukiChessBot</strong> est un système de stream Twitch entièrement automatisé. Un bot IA
-                    joue en continu sur Lichess via Stockfish, commente ses coups avec Ollama, parle à voix haute avec
-                    Kokoro TTS, anime un avatar 3D dans Warudo, et gère le chat Twitch pour accepter les défis des
-                    spectateurs.</p>
+                <p data-i18n="chessbot.project_text_1" data-i18n-html="true"></p>
                 <br>
-                <p>Le projet couvre l'intégralité du pipeline : de l'API Lichess au rendu OBS, en passant par la
-                    synthèse vocale, les animations WebSocket, les transitions automatiques entre les parties, et un
-                    système de matchmaking intelligent qui trouve des adversaires 24h/24.</p>
+                <p data-i18n="chessbot.project_text_2"></p>
                 <br>
-                <p>Tape <strong style="color:var(--accent)">!defi</strong> dans le chat Twitch pour défier le Tanuki. Il
-                    ne dort jamais.</p>
+                <p data-i18n="chessbot.project_text_3" data-i18n-html="true"></p>
             </div>
             <div class="cb-features reveal">
                 <div class="cb-feat">
                     <div class="cb-feat-icon">♟️</div>
                     <h4>Stockfish</h4>
-                    <p>Moteur d'échecs — 3s/coup</p>
+                    <p data-i18n="chessbot.feat_stockfish"></p>
                 </div>
                 <div class="cb-feat">
                     <div class="cb-feat-icon">🧠</div>
                     <h4>Ollama</h4>
-                    <p>Commentaires IA — llama3.1:8b</p>
+                    <p data-i18n="chessbot.feat_ollama"></p>
                 </div>
                 <div class="cb-feat">
                     <div class="cb-feat-icon">🔊</div>
                     <h4>Kokoro TTS</h4>
-                    <p>Synthèse vocale locale</p>
+                    <p data-i18n="chessbot.feat_kokoro"></p>
                 </div>
                 <div class="cb-feat">
                     <div class="cb-feat-icon">🎭</div>
                     <h4>Warudo</h4>
-                    <p>Avatar 3D + WebSocket</p>
+                    <p data-i18n="chessbot.feat_warudo"></p>
                 </div>
                 <div class="cb-feat">
                     <div class="cb-feat-icon">📺</div>
                     <h4>OBS</h4>
-                    <p>Transitions auto + overlays</p>
+                    <p data-i18n="chessbot.feat_obs"></p>
                 </div>
                 <div class="cb-feat">
                     <div class="cb-feat-icon">💬</div>
                     <h4>Twitch Chat</h4>
-                    <p>!defi !score !question</p>
+                    <p data-i18n="chessbot.feat_twitch"></p>
                 </div>
             </div>
         </div>
@@ -555,8 +548,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <!-- ARCHITECTURE -->
     <section class="cb-section">
-        <div class="label reveal"><span class="label-n">02 /</span> Architecture</div>
-        <h2 class="section-h reveal">Pipeline<em> complet.</em></h2>
+        <div class="label reveal" data-i18n="chessbot.arch_label"></div>
+        <h2 class="section-h reveal" data-i18n="chessbot.arch_heading" data-i18n-html="true"></h2>
         <div class="cb-arch-flow reveal">
             <div class="cb-arch-node hl">Lichess API</div>
             <div class="cb-arch-arrow">→</div>
@@ -578,8 +571,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <!-- STACK -->
     <section class="cb-section">
-        <div class="label reveal"><span class="label-n">03 /</span> Stack technique</div>
-        <h2 class="section-h reveal">Sous le<em> capot.</em></h2>
+        <div class="label reveal" data-i18n="chessbot.stack_label"></div>
+        <h2 class="section-h reveal" data-i18n="chessbot.stack_heading" data-i18n-html="true"></h2>
         <div class="cb-stack-grid reveal">
             <div class="cb-stack-item">
                 <h4>Python</h4>
@@ -622,8 +615,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <!-- AVATARS 3D -->
     <section class="cb-section">
-        <div class="label reveal"><span class="label-n">04 /</span> Personnages</div>
-        <h2 class="section-h reveal">Les<em> avatars.</em></h2>
+        <div class="label reveal" data-i18n="chessbot.avatars_label"></div>
+        <h2 class="section-h reveal" data-i18n="chessbot.avatars_heading" data-i18n-html="true"></h2>
         <div class="cb-avatars-grid reveal">
             <div class="cb-avatar-card">
                 <model-viewer class="cb-avatar-canvas" src="assets/models/Tanuki-vr.glb" auto-rotate camera-controls
@@ -632,9 +625,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 </model-viewer>
                 <div class="cb-avatar-info">
                     <div class="cb-avatar-name">TANUKI</div>
-                    <div class="cb-avatar-meta">AVATAR PRINCIPAL — VOIX ANGLAISE — AM_ADAM</div>
+                    <div class="cb-avatar-meta" data-i18n="chessbot.avatar_tanuki_meta"></div>
                 </div>
-                <div class="cb-avatar-badge">ACTIF</div>
+                <div class="cb-avatar-badge" data-i18n="chessbot.badge_active"></div>
             </div>
             <div class="cb-avatar-card">
                 <model-viewer class="cb-avatar-canvas" src="assets/models/Kitsune.glb" auto-rotate camera-controls
@@ -643,9 +636,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 </model-viewer>
                 <div class="cb-avatar-info">
                     <div class="cb-avatar-name">KITSUNE</div>
-                    <div class="cb-avatar-meta">AVATAR SECONDAIRE — VOIX FÉMININE</div>
+                    <div class="cb-avatar-meta" data-i18n="chessbot.avatar_kitsune_meta"></div>
                 </div>
-                <div class="cb-avatar-badge soon">BIENTÔT</div>
+                <div class="cb-avatar-badge soon" data-i18n="chessbot.badge_soon"></div>
             </div>
             <div class="cb-avatar-card">
                 <model-viewer class="cb-avatar-canvas" src="assets/models/tanuki-street.glb" auto-rotate camera-controls
@@ -654,21 +647,21 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 </model-viewer>
                 <div class="cb-avatar-info">
                     <div class="cb-avatar-name">TANUKI-CHAN</div>
-                    <div class="cb-avatar-meta">AVATAR ANIME — VOIX JAPONAISE</div>
+                    <div class="cb-avatar-meta" data-i18n="chessbot.avatar_chan_meta"></div>
                 </div>
-                <div class="cb-avatar-badge soon">BIENTÔT</div>
+                <div class="cb-avatar-badge soon" data-i18n="chessbot.badge_soon"></div>
             </div>
         </div>
         <p class="reveal"
             style="color:var(--muted);margin-top:1.5rem;font-size:.75rem;font-family:var(--font-mono);letter-spacing:.05em;">
-            Modèles VRM générés via Tripo3D — animés dans Warudo via WebSocket. Cliquer-glisser pour faire tourner.
+            <span data-i18n="chessbot.avatars_note"></span>
         </p>
     </section>
 
     <!-- TWITCH EMBED -->
     <section class="cb-section">
-        <div class="label reveal"><span class="label-n">05 /</span> En direct</div>
-        <h2 class="section-h reveal">Le<em> stream.</em></h2>
+        <div class="label reveal" data-i18n="chessbot.stream_label"></div>
+        <h2 class="section-h reveal" data-i18n="chessbot.stream_heading" data-i18n-html="true"></h2>
         <div class="cb-twitch-embed reveal">
             <iframe src="https://player.twitch.tv/?channel=tanukicorporation&parent=tnk-sempai.github.io"
                 frameborder="0" allowfullscreen style="width:100%;height:100%;"></iframe>
@@ -677,8 +670,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <section style="padding:2rem 3.5rem;">
         <a href="/projects"
-            style="font-family:var(--font-mono);font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);text-decoration:none;">←
-            Retour aux projets</a>
+            style="font-family:var(--font-mono);font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);text-decoration:none;"><span data-i18n="chessbot.back"></span></a>
     </section>
 
     <footer class="footer">
@@ -686,14 +678,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <div class="footer-top">
                 <span class="footer-logo">TANUKI CORP.</span>
                 <nav class="footer-nav">
-                    <a href="/about">À propos</a>
-                    <a href="/projects">Projets</a>
-                    <a href="/skills">Skills</a>
-                    <a href="/contact">Contact</a>
+                    <a href="/about" data-i18n="nav.about"></a>
+                    <a href="/projects" data-i18n="nav.projects"></a>
+                    <a href="/skills" data-i18n="nav.skills"></a>
+                    <a href="/contact" data-i18n="nav.contact"></a>
                 </nav>
             </div>
             <div class="footer-bottom">
-                <span>LASS © 2026 · Tous droits réservés</span>
+                <span data-i18n="footer.rights"></span>
                 <a href="mailto:contact@tanuki-corporation.com">contact@tanuki-corporation.com</a>
             </div>
         </div>
@@ -719,6 +711,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
        
         initAvatar('avatar-tanuki'); initAvatar('avatar-kitsune'); initAvatar('avatar-chan');
     </script>
+    <script src="/i18n.js"></script>
 </body>
 
 </html>

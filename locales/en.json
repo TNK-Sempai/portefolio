@@ -1,0 +1,223 @@
+{
+  "nav": {
+    "about": "About",
+    "projects": "Projects",
+    "skills": "Skills",
+    "contact": "Contact",
+    "available": "Available →",
+    "home": "Home"
+  },
+
+  "hero": {
+    "eyebrow": "Full-Stack Developer & Community Management",
+    "desc": "I design and build <em>tailor-made digital experiences</em> — from idea to final product, with an obsession for the details that make the difference.",
+    "available": "Available for projects",
+    "location": "Brussels, Belgium",
+    "cta": "Discover my profile",
+    "scroll": "Scroll"
+  },
+
+  "footer": {
+    "rights": "LASS © 2026 · All rights reserved"
+  },
+
+  "about": {
+    "label": "01 / About",
+    "heading": "Your ideas on screen.",
+    "stat_years": "Years exp.",
+    "stat_projects": "Projects delivered",
+    "text_1": "Full-stack developer based in <strong>Brussels</strong>, I work on projects that combine solid business logic with polished interfaces. From B2B marketplaces to mobile apps and ticketing systems — I love challenges that require <strong>as much thinking as coding</strong>.",
+    "text_2": "My stack revolves around <strong>Next.js, React and TypeScript</strong>, with a particular focus on performance and user experience. I also integrate <strong>Google Ads & SEO</strong> strategies to create real business solutions, not just a website.",
+    "timeline": {
+      "chessbot_title": "Tanuki Chess Bot",
+      "chessbot_sub": "Autonomous AI bot playing chess 24/7 on Twitch — Stockfish, Ollama, animated 3D avatar, text-to-speech.",
+      "optitroc_title": "Opti-Troc — Creation & Development",
+      "optitroc_sub": "Born from a conversation between friends",
+      "yummr_title": "Yummr — Currently in development",
+      "yummr_sub": "React Native · Next.js · shadcn/ui",
+      "timeevent_title": "Time-Event.ch — Ticketing platform",
+      "timeevent_sub": "Support, CMS redesign, Ads & Meta Ads campaigns",
+      "bigfactory_title": "Big Factory Corp ASBL",
+      "bigfactory_sub": "Cultural development and artist support"
+    },
+    "process_label": "02 / Process",
+    "process_heading": "How I work",
+    "step1_title": "Listen & Strategize",
+    "step1_text": "We start by understanding your context, constraints and what you really want to achieve. No solution before knowing the problem.",
+    "step2_title": "Design & Architecture",
+    "step2_text": "Wireframes, technical choices, data structure. I build a solid foundation before writing a single line of code.",
+    "step3_title": "Iterative Development",
+    "step3_text": "Regular deliveries, continuous feedback. You see the product take shape each sprint, with no bad surprises.",
+    "step4_title": "Launch & Follow-up",
+    "step4_text": "Clean deployment, clear docs, post-launch support. I don't disappear after delivery."
+  },
+
+  "contact": {
+    "label": "05 / Contact",
+    "heading_1": "LET'S",
+    "heading_2": "WORK",
+    "heading_3": "TOGETHER",
+    "copy": "Got a project in mind? An idea to explore? I'm available for <em>freelance missions</em> and collaborations.",
+    "send_email": "Send an email"
+  },
+
+  "projects": {
+    "label": "02 / Selected projects",
+    "heading": "Work",
+    "strip_hint": "Swipe or use the arrows",
+    "see_project": "View project",
+    "see_site": "View site",
+    "soon": "Coming soon",
+    "live_demo": "Live Demo",
+    "tnk_adaptive": {
+      "name": "TNK Adaptive",
+      "desc": "Self-adaptive multi-pair algorithmic trading bot. Monitors the top 50 USDT pairs on Bybit, learns from its own trades and automatically adjusts its parameters."
+    },
+    "chessbot": {
+      "name": "Tanuki Chess Bot",
+      "desc": "Autonomous AI bot that plays chess 24/7 on Twitch — Stockfish, Ollama, animated 3D avatar, text-to-speech."
+    },
+    "optitroc": {
+      "name": "Opti-Troc",
+      "desc": "B2B marketplace for professional optical equipment. Robust authentication, listings system, messaging, complete UI."
+    },
+    "yummr": {
+      "name": "Yummr",
+      "desc": "The \"Tinder\" app for recipes — match to avoid boring meals and endless debates."
+    },
+    "bigfactory": {
+      "name": "Big Factory",
+      "desc": "Cultural development association based in Brussels and Paris, complete website creation."
+    },
+    "timeevent": {
+      "name": "Time-Event.ch",
+      "desc": "Event platform for the Théâtre du Martolet, Saint-Maurice. Consent Mode v2, conversion tracking, Ads campaigns."
+    },
+    "widgets_label": "02b / Small projects",
+    "widgets_heading": "Widgets",
+    "see_widget": "View widget",
+    "palette": {
+      "name": "Palette generator",
+      "desc": "Color palette creation platform."
+    },
+    "counter": {
+      "name": "JS Counter",
+      "desc": "Interactive counter in pure JavaScript."
+    },
+    "calculator": {
+      "name": "Calculator for Monique",
+      "desc": "A calculator dedicated to Monique, made with love."
+    },
+    "school_label": "02c / School",
+    "school_heading": "Integration work",
+    "ti1": {
+      "name": "TI Pre-training",
+      "desc": "Integration work done in pre-training — complete site delivered from A to Z."
+    },
+    "ti_paris": {
+      "name": "TI Paris",
+      "desc": "2 days of coding from scratch, without any assistance — pure development exercise under constraint."
+    },
+    "ti2": {
+      "name": "TI 2 - Guestbook",
+      "desc": "Full-stack guestbook in procedural MVC — JS/PHP validated form, secure PDO, pagination and dark mode."
+    }
+  },
+
+  "skills": {
+    "label": "03 / Skills",
+    "heading": "What I master",
+    "desc": "From front-end to back-end infrastructure, I adapt my stack to the project and quickly learn what's missing.",
+    "tools_title": "Tools & Ecosystem",
+    "cat_frontend": "Frontend",
+    "cat_backend": "Backend & Data",
+    "cat_marketing": "Marketing & Analytics",
+    "skill_react_sub": "App Router, SSR, SSG",
+    "skill_css_sub": "Animations, Responsive",
+    "skill_ads_sub": "Search, Display, Remarketing",
+    "skill_consent_sub": "GDPR, GTM"
+  },
+
+  "chessbot": {
+    "eyebrow": "Autonomous 24/7 stream",
+    "subtitle": "An AI that plays chess, comments every move out loud, animates a 3D avatar and manages the Twitch chat — with zero human intervention.",
+    "watch_live": "Watch live →",
+    "checking": "CHECKING...",
+    "bot_online": "BOT ONLINE",
+    "bot_offline": "BOT OFFLINE",
+    "error_loading": "LOADING ERROR",
+    "stat_played": "Games played",
+    "stat_wins": "Wins",
+    "stat_losses": "Losses",
+    "stat_draws": "Draws",
+    "project_label": "01 / The project",
+    "project_heading": "A fully autonomous bot.",
+    "project_text_1": "<strong>TanukiChessBot</strong> is a fully automated Twitch streaming system.",
+    "project_text_2": "The project covers the entire pipeline: from the Lichess API to the OBS render.",
+    "project_text_3": "Type <strong>!defi</strong> in the Twitch chat to challenge the Tanuki. He never sleeps.",
+    "arch_label": "02 / Architecture",
+    "arch_heading": "Full pipeline.",
+    "stack_label": "03 / Tech stack",
+    "stack_heading": "Under the hood.",
+    "avatars_label": "04 / Characters",
+    "avatars_heading": "The avatars.",
+    "avatars_note": "VRM models generated via Tripo3D — animated in Warudo via WebSocket. Click and drag to rotate.",
+    "avatar_tanuki_meta": "MAIN AVATAR — ENGLISH VOICE — AM_ADAM",
+    "avatar_kitsune_meta": "SECONDARY AVATAR — FEMALE VOICE",
+    "avatar_chan_meta": "ANIME AVATAR — JAPANESE VOICE",
+    "badge_active": "ACTIVE",
+    "badge_soon": "SOON",
+    "stream_label": "05 / Live",
+    "stream_heading": "The stream.",
+    "back": "← Back to projects",
+    "feat_stockfish": "Chess engine — 3s/move",
+    "feat_ollama": "AI commentary — llama3.1:8b",
+    "feat_kokoro": "Local text-to-speech",
+    "feat_warudo": "3D Avatar + WebSocket",
+    "feat_obs": "Auto transitions + overlays",
+    "feat_twitch": "!defi !score !question"
+  },
+
+  "tnk_adaptive": {
+    "eyebrow": "Algorithmic paper trading",
+    "subtitle": "Self-adaptive multi-pair paper trading bot",
+    "meta": "Tanuki Corporation · 2026",
+    "badge": "BOT ACTIVE · PAPER",
+    "cta_demo": "View live demo →",
+    "cta_github": "GitHub ↗",
+    "project_label": "01 / The project",
+    "project_heading": "A bot that learns.",
+    "project_text": "TNK Adaptive is an open source algorithmic trading bot that monitors in real time the top 50 USDT pairs by volume on Bybit.",
+    "features_label": "02 / Features",
+    "features_heading": "What it does.",
+    "feat_watch": "MONITORING",
+    "feat_watch_desc": "Top 50 USDT pairs, updated every 5 minutes.",
+    "feat_strategy": "STRATEGY",
+    "feat_strategy_desc": "RSI(14) + MA crossover. Automatic Long/Short. Stop Loss -3%, Take Profit +6%.",
+    "feat_learn": "LEARNING",
+    "feat_learn_desc": "After 10 trades per pair, adjusts RSI, SL and TP based on win rate.",
+    "feat_dashboard": "DASHBOARD",
+    "feat_dashboard_desc": "Real-time TradingView candles, live positions, complete trade history.",
+    "engine_label": "03 / Adaptive engine",
+    "engine_heading": "How it learns.",
+    "col_condition": "Condition",
+    "col_adjustment": "Automatic adjustment",
+    "stack_label": "04 / Tech stack",
+    "stack_heading": "Under the hood.",
+    "install_label": "05 / Quick install",
+    "install_heading": "Start in 60 seconds.",
+    "copy_btn": "Copy",
+    "copied": "✓ Copied",
+    "no_api": "✓ No API key required.",
+    "no_risk": "✓ No financial risk.",
+    "roadmap_label": "06 / Roadmap",
+    "roadmap_heading": "What's coming.",
+    "dashboard_label": "07 / Live",
+    "dashboard_heading": "The dashboard.",
+    "support_label": "08 / Support",
+    "support_heading": "Support the project.",
+    "copy_address": "Copy address",
+    "back": "← Back to projects",
+    "disclaimer": "⚠️ Educational project. Not financial advice."
+  }
+}

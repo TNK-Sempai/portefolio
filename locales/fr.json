@@ -1,0 +1,223 @@
+{
+  "nav": {
+    "about": "À propos",
+    "projects": "Projets",
+    "skills": "Skills",
+    "contact": "Contact",
+    "available": "Disponible →",
+    "home": "Accueil"
+  },
+
+  "hero": {
+    "eyebrow": "Développeur Full-Stack & Community Management",
+    "desc": "Je conçois et développe des <em>expériences digitales sur-mesure</em> — de l'idée au produit final, avec une obsession pour les détails qui font la différence.",
+    "available": "Disponible pour missions",
+    "location": "Bruxelles, Belgique",
+    "cta": "Découvrir mon profil",
+    "scroll": "Scroll"
+  },
+
+  "footer": {
+    "rights": "LASS © 2026 · Tous droits réservés"
+  },
+
+  "about": {
+    "label": "01 / À propos",
+    "heading": "Vos idées à l'écran.",
+    "stat_years": "Années exp.",
+    "stat_projects": "Projets livrés",
+    "text_1": "Développeur full-stack basé à <strong>Bruxelles</strong>, je travaille sur des projets qui mêlent logique métier solide et interfaces soignées. Du marketplace B2B aux apps mobiles en passant par les systèmes de billetterie — j'aime les défis qui demandent <strong>autant de réflexion que de code</strong>.",
+    "text_2": "Ma stack tourne autour de <strong>Next.js, React et TypeScript</strong>, avec une attention particulière pour la performance et l'expérience utilisateur. J'intègre aussi les stratégies <strong>Google Ads & SEO</strong> pour créer de vraies solutions business, pas juste un fichier.",
+    "timeline": {
+      "chessbot_title": "Tanuki Chess Bot",
+      "chessbot_sub": "Bot IA autonome qui joue aux échecs 24/7 sur Twitch — Stockfish, Ollama, avatar 3D animé, synthèse vocale.",
+      "optitroc_title": "Opti-Troc — Création & Développement",
+      "optitroc_sub": "Créer à partir d'une discussion entre proches",
+      "yummr_title": "Yummr — Actuellement en développement",
+      "yummr_sub": "React Native · Next.js · shadcn/ui",
+      "timeevent_title": "Time-Event.ch — Plateforme billetterie",
+      "timeevent_sub": "Accompagnement, Refonte CMS, Campagnes Ads & Méta Ads",
+      "bigfactory_title": "Big Factory Corp ASBL",
+      "bigfactory_sub": "Développement culturel et Accompagnement d'artistes"
+    },
+    "process_label": "02 / Process",
+    "process_heading": "Comment je travaille",
+    "step1_title": "Écoute & Stratégie",
+    "step1_text": "On commence par comprendre ton contexte, tes contraintes et ce que tu veux vraiment accomplir. Pas de solution avant de connaître le problème.",
+    "step2_title": "Design & Architecture",
+    "step2_text": "Wireframes, choix techniques, structure de données. Je construis une base solide avant d'écrire une ligne de code.",
+    "step3_title": "Développement itératif",
+    "step3_text": "Livraisons régulières, feedback continu. Tu vois le produit prendre forme à chaque sprint, sans mauvaises surprises.",
+    "step4_title": "Launch & Suivi",
+    "step4_text": "Déploiement propre, docs claires, suivi post-launch. Je ne disparais pas après la livraison."
+  },
+
+  "contact": {
+    "label": "05 / Contact",
+    "heading_1": "TRAVAIL",
+    "heading_2": "LONS",
+    "heading_3": "ENSEMBLE",
+    "copy": "Un projet en tête ? Une idée à creuser ? Je suis disponible pour des <em>missions freelance</em> et collaborations.",
+    "send_email": "Envoyer un email"
+  },
+
+  "projects": {
+    "label": "02 / Projets sélectionnés",
+    "heading": "Travaux",
+    "strip_hint": "Swipe ou utilise les flèches",
+    "see_project": "Voir le projet",
+    "see_site": "Voir le site",
+    "soon": "Bientôt disponible",
+    "live_demo": "Live Demo",
+    "tnk_adaptive": {
+      "name": "TNK Adaptive",
+      "desc": "Bot de trading algorithmique multi-paires auto-adaptatif. Surveille le top 50 paires USDT sur Bybit, apprend de ses propres trades et ajuste ses paramètres automatiquement."
+    },
+    "chessbot": {
+      "name": "Tanuki Chess Bot",
+      "desc": "Bot IA autonome qui joue aux échecs 24/7 sur Twitch — Stockfish, Ollama, avatar 3D animé, synthèse vocale."
+    },
+    "optitroc": {
+      "name": "Opti-Troc",
+      "desc": "Marketplace B2B pour l'équipement optique professionnel. Authentification robuste, système d'annonces, de messagerie, UI complète."
+    },
+    "yummr": {
+      "name": "Yummr",
+      "desc": "L'app \"Tinder\" des recettes — match pour éviter les salades et les prises de têtes."
+    },
+    "bigfactory": {
+      "name": "Big Factory",
+      "desc": "Association de développement culturel basés à Bruxelles et Paris, création totale du site."
+    },
+    "timeevent": {
+      "name": "Time-Event.ch",
+      "desc": "Plateforme événementielle pour le Théâtre du Martolet, Saint-Maurice. Consent Mode v2, tracking conversions, campagnes Ads."
+    },
+    "widgets_label": "02b / Petits projets",
+    "widgets_heading": "Widgets",
+    "see_widget": "Voir le widget",
+    "palette": {
+      "name": "Générateur de palette",
+      "desc": "Plateforme de création de palette de couleurs."
+    },
+    "counter": {
+      "name": "Compteur JS",
+      "desc": "Compteur interactif en JavaScript pur."
+    },
+    "calculator": {
+      "name": "Calculatrice pour Monique",
+      "desc": "Une calculatrice dédiée à Monique, faite avec amour."
+    },
+    "school_label": "02c / École",
+    "school_heading": "Travaux d'intégration",
+    "ti1": {
+      "name": "TI Préformation",
+      "desc": "Travail d'intégration réalisé en préformation — site complet livré de A à Z."
+    },
+    "ti_paris": {
+      "name": "TI Paris",
+      "desc": "2 jours de code from scratch, sans aucune assistance — exercice de pur développement sous contrainte."
+    },
+    "ti2": {
+      "name": "TI 2 - Livre d'or",
+      "desc": "Livre d'or full-stack en MVC procédural — formulaire validé JS/PHP, PDO sécurisé, pagination et dark mode."
+    }
+  },
+
+  "skills": {
+    "label": "03 / Compétences",
+    "heading": "Ce que je maîtrise",
+    "desc": "Des technos front aux infras back, j'adapte ma stack au projet et j'apprends vite ce qui manque.",
+    "tools_title": "Outils & Écosystème",
+    "cat_frontend": "Frontend",
+    "cat_backend": "Backend & Data",
+    "cat_marketing": "Marketing & Analytics",
+    "skill_react_sub": "App Router, SSR, SSG",
+    "skill_css_sub": "Animations, Responsive",
+    "skill_ads_sub": "Search, Display, Remarketing",
+    "skill_consent_sub": "RGPD, GTM"
+  },
+
+  "chessbot": {
+    "eyebrow": "Stream autonome 24/7",
+    "subtitle": "Une IA qui joue aux échecs, commente chaque coup à voix haute, anime un avatar 3D et gère le chat Twitch — sans aucune intervention humaine.",
+    "watch_live": "Regarder en live →",
+    "checking": "VÉRIFICATION...",
+    "bot_online": "BOT EN LIGNE",
+    "bot_offline": "BOT HORS LIGNE",
+    "error_loading": "ERREUR CHARGEMENT",
+    "stat_played": "Parties jouées",
+    "stat_wins": "Victoires",
+    "stat_losses": "Défaites",
+    "stat_draws": "Nuls",
+    "project_label": "01 / Le projet",
+    "project_heading": "Un bot entièrement autonome.",
+    "project_text_1": "<strong>TanukiChessBot</strong> est un système de stream Twitch entièrement automatisé.",
+    "project_text_2": "Le projet couvre l'intégralité du pipeline : de l'API Lichess au rendu OBS.",
+    "project_text_3": "Tape <strong>!defi</strong> dans le chat Twitch pour défier le Tanuki. Il ne dort jamais.",
+    "arch_label": "02 / Architecture",
+    "arch_heading": "Pipeline complet.",
+    "stack_label": "03 / Stack technique",
+    "stack_heading": "Sous le capot.",
+    "avatars_label": "04 / Personnages",
+    "avatars_heading": "Les avatars.",
+    "avatars_note": "Modèles VRM générés via Tripo3D — animés dans Warudo via WebSocket. Cliquer-glisser pour faire tourner.",
+    "avatar_tanuki_meta": "AVATAR PRINCIPAL — VOIX ANGLAISE — AM_ADAM",
+    "avatar_kitsune_meta": "AVATAR SECONDAIRE — VOIX FÉMININE",
+    "avatar_chan_meta": "AVATAR ANIME — VOIX JAPONAISE",
+    "badge_active": "ACTIF",
+    "badge_soon": "BIENTÔT",
+    "stream_label": "05 / En direct",
+    "stream_heading": "Le stream.",
+    "back": "← Retour aux projets",
+    "feat_stockfish": "Moteur d'échecs — 3s/coup",
+    "feat_ollama": "Commentaires IA — llama3.1:8b",
+    "feat_kokoro": "Synthèse vocale locale",
+    "feat_warudo": "Avatar 3D + WebSocket",
+    "feat_obs": "Transitions auto + overlays",
+    "feat_twitch": "!defi !score !question"
+  },
+
+  "tnk_adaptive": {
+    "eyebrow": "Paper trading algorithmique",
+    "subtitle": "Bot de paper trading multi-paires auto-adaptatif",
+    "meta": "Tanuki Corporation · 2026",
+    "badge": "BOT ACTIF · PAPER",
+    "cta_demo": "Voir la démo live →",
+    "cta_github": "GitHub ↗",
+    "project_label": "01 / Le projet",
+    "project_heading": "Un bot qui apprend.",
+    "project_text": "TNK Adaptive est un bot de trading algorithmique open source qui surveille en temps réel le top 50 paires USDT par volume sur Bybit.",
+    "features_label": "02 / Fonctionnalités",
+    "features_heading": "Ce que ça fait.",
+    "feat_watch": "SURVEILLANCE",
+    "feat_watch_desc": "Top 50 paires USDT, mis à jour toutes les 5 minutes.",
+    "feat_strategy": "STRATÉGIE",
+    "feat_strategy_desc": "RSI(14) + MA croisement. Long/Short automatiques. Stop Loss -3%, Take Profit +6%.",
+    "feat_learn": "APPRENTISSAGE",
+    "feat_learn_desc": "Après 10 trades par paire, ajuste RSI, SL et TP selon win rate.",
+    "feat_dashboard": "DASHBOARD",
+    "feat_dashboard_desc": "Chandelles TradingView en temps réel, positions live, historique complet.",
+    "engine_label": "03 / Moteur adaptatif",
+    "engine_heading": "Comment il apprend.",
+    "col_condition": "Condition",
+    "col_adjustment": "Ajustement automatique",
+    "stack_label": "04 / Stack technique",
+    "stack_heading": "Sous le capot.",
+    "install_label": "05 / Installation rapide",
+    "install_heading": "Démarrer en 60 secondes.",
+    "copy_btn": "Copier",
+    "copied": "✓ Copié",
+    "no_api": "✓ Aucune clé API requise.",
+    "no_risk": "✓ Aucun risque financier.",
+    "roadmap_label": "06 / Roadmap",
+    "roadmap_heading": "Ce qui arrive.",
+    "dashboard_label": "07 / En direct",
+    "dashboard_heading": "Le dashboard.",
+    "support_label": "08 / Support",
+    "support_heading": "Soutenir le projet.",
+    "copy_address": "Copier l'adresse",
+    "back": "← Retour aux projets",
+    "disclaimer": "⚠️ Projet éducatif. Pas un conseil financier."
+  }
+}
