@@ -190,7 +190,7 @@ gsap.fromTo('body',
 );
 
 /* ─── CURSOR CUSTOM (pages principales) ─── */
-const isTouchOnly = window.matchMedia('(pointer:coarse)').matches && !window.matchMedia('(pointer:fine)').matches;
+const isTouchOnly = ('ontouchstart' in window) && window.innerWidth < 1024;
 if (!isTouchOnly) {
   const cursor = document.getElementById('cur');
   const cursorRing = document.getElementById('cur-ring');
