@@ -13,13 +13,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/png" href="/img/Nouveau projet (32).webp" sizes="32x32">
     <link rel="apple-touch-icon" href="/img/Nouveau projet (32).webp">
-    <meta name="description" content="TNK-Adaptive — projet de design adaptatif développé par Lass Tanuki Sempaï, développeur Full-Stack à Bruxelles.">
+    <meta name="description" content="TNK Adaptive v2 — Bot de paper trading crypto multi-paires sur Bybit avec ATR trailing stop, filtre ADX, partial TP et multi-timeframe 1/3/5 min.">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://tanuki-corporation.com/tnk-adaptive">
     <link rel="alternate" hreflang="fr" href="https://tanuki-corporation.com/tnk-adaptive" />
     <link rel="alternate" hreflang="en" href="https://tanuki-corporation.com/tnk-adaptive" />
     <link rel="alternate" hreflang="x-default" href="https://tanuki-corporation.com/tnk-adaptive" />
-    <title>TNK Adaptive — Tanuki Sempaï</title>
+    <title>TNK Adaptive v2 — Tanuki Sempaï</title>
     <link rel="stylesheet" href="/css/main.css">
     <link rel="stylesheet" href="/css/pages.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -76,6 +76,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <span class="ta-pill">Flask</span>
                 <span class="ta-pill">SQLite</span>
                 <span class="ta-pill">ccxt</span>
+                <span class="ta-pill">pybit</span>
+                <span class="ta-pill">Pandas</span>
+                <span class="ta-pill">WebSocket</span>
                 <span class="ta-pill">TradingView</span>
             </div>
             <div class="ta-live-badge">
@@ -83,9 +86,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <span data-i18n="tnk_adaptive.badge"></span>
             </div>
             <div class="ta-hero-ctas">
-                <a href="https://irrigation-southampton-sisters-minus.trycloudflare.com" target="_blank"
-                    class="ta-cta" data-i18n="tnk_adaptive.cta_demo"></a>
-                <a href="https://github.com/TNK-Sempai/TNK-ADAPTIVE" target="_blank" class="ta-cta ghost" data-i18n="tnk_adaptive.cta_github"></a>
+                <a href="https://github.com/TNK-Sempai/TNK-ADAPTIVE" target="_blank"
+                    class="ta-cta" data-i18n="tnk_adaptive.cta_github"></a>
             </div>
         </div>
     </section>
@@ -100,35 +102,45 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </p>
     </section>
 
-    <!-- ─── 02 · CE QUE ÇA FAIT ─── -->
+    <!-- ─── 02 · SYSTÈME DE DÉCISION v2 ─── -->
     <section class="ta-section alt">
-        <div class="label reveal" data-i18n="tnk_adaptive.features_label"></div>
-        <h2 class="section-h reveal" data-i18n="tnk_adaptive.features_heading" data-i18n-html="true"></h2>
+        <div class="label reveal">02 — SYSTÈME DE DÉCISION</div>
+        <h2 class="section-h reveal">Multi-timeframe<span> + ATR + ADX</span></h2>
         <div class="ta-features reveal">
             <div class="ta-feat">
-                <div class="ta-feat-icon">👁</div>
-                <h4 data-i18n="tnk_adaptive.feat_watch"></h4>
-                <p data-i18n="tnk_adaptive.feat_watch_desc"></p>
+                <div class="ta-feat-icon">📡</div>
+                <h4>Multi-Timeframe 1/3/5 min</h4>
+                <p>Filtre de régime sur 5 min (ADX), confirmation sur 3 min (Chandelier Exit + SuperTrend), exécution sur 1 min. Méthode Gambell.</p>
             </div>
             <div class="ta-feat">
                 <div class="ta-feat-icon">🎯</div>
-                <h4 data-i18n="tnk_adaptive.feat_strategy"></h4>
-                <p data-i18n="tnk_adaptive.feat_strategy_desc"></p>
+                <h4>Filtre ADX</h4>
+                <p>ADX &gt; 25 = marché en trend, on trade. ADX &lt; 25 = range, on attend. DI+ vs DI- filtre la direction (longs ou shorts uniquement).</p>
             </div>
             <div class="ta-feat">
-                <div class="ta-feat-icon">🧠</div>
-                <h4 data-i18n="tnk_adaptive.feat_learn"></h4>
-                <p data-i18n="tnk_adaptive.feat_learn_desc"></p>
+                <div class="ta-feat-icon">📐</div>
+                <h4>ATR Trailing Stop</h4>
+                <p>Chandelier Exit : le stop suit le prix à ATR × 2.9 du plus haut atteint. Ne recule jamais. Remplace le breakeven fixe à +1.5%.</p>
             </div>
             <div class="ta-feat">
-                <div class="ta-feat-icon">📊</div>
-                <h4 data-i18n="tnk_adaptive.feat_dashboard"></h4>
-                <p data-i18n="tnk_adaptive.feat_dashboard_desc"></p>
+                <div class="ta-feat-icon">💰</div>
+                <h4>Partial Take Profit</h4>
+                <p>Scaling out en 3 paliers : 34% à 1:1 R:R (trade "gratuit"), 50% à 1:2, le reste court avec le trailing stop.</p>
+            </div>
+            <div class="ta-feat">
+                <div class="ta-feat-icon">⏱</div>
+                <h4>Time-Based Exit</h4>
+                <p>Si le prix ne bouge pas de 0.5× ATR en 60 minutes, le trade est fermé pour libérer le capital.</p>
+            </div>
+            <div class="ta-feat">
+                <div class="ta-feat-icon">🔒</div>
+                <h4>Anti-Corrélation</h4>
+                <p>Bloque l'ouverture simultanée sur spot ET futures du même actif. Pas de double risque sur le même mouvement.</p>
             </div>
         </div>
     </section>
 
-    <!-- ─── 03 · COMMENT IL APPREND ─── -->
+    <!-- ─── 03 · MOTEUR ADAPTATIF v2 ─── -->
     <section class="ta-section">
         <div class="label reveal" data-i18n="tnk_adaptive.engine_label"></div>
         <h2 class="section-h reveal" data-i18n="tnk_adaptive.engine_heading" data-i18n-html="true"></h2>
@@ -143,23 +155,27 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <tbody>
                     <tr>
                         <td>Win rate &lt; 40%</td>
-                        <td>RSI rendu plus restrictif</td>
+                        <td>Seuil ADX augmenté — entrées plus strictes</td>
                     </tr>
                     <tr>
                         <td>SL touché &gt; 60%</td>
-                        <td>Stop Loss élargi</td>
+                        <td>Multiplicateur ATR SL élargi — stop plus loin</td>
                     </tr>
                     <tr>
-                        <td>TP touché &gt; 60%</td>
-                        <td>Take Profit augmenté</td>
+                        <td>Time exit &gt; 40%</td>
+                        <td>Seuil ADX augmenté — ne trader que les trends forts</td>
                     </tr>
                     <tr>
                         <td>PnL moyen négatif</td>
-                        <td>Ratio R:R corrigé</td>
+                        <td>ATR SL réduit + ATR TP augmenté — ratio R:R corrigé</td>
                     </tr>
                     <tr>
                         <td>Win rate &gt; 65%</td>
-                        <td>Paramètres assouplis</td>
+                        <td>Seuil ADX abaissé — plus d'opportunités</td>
+                    </tr>
+                    <tr>
+                        <td>Partial TP &gt; 80%</td>
+                        <td>ATR TP augmenté — objectifs plus ambitieux</td>
                     </tr>
                 </tbody>
             </table>
@@ -172,36 +188,36 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <h2 class="section-h reveal" data-i18n="tnk_adaptive.stack_heading" data-i18n-html="true"></h2>
         <div class="ta-stack reveal">
             <div class="ta-stack-item">
-                <h4>Python</h4>
-                <p>Cœur du bot — logique de trading, moteur adaptatif</p>
+                <h4>Python 3.12</h4>
+                <p>Cœur du bot — signaux multi-TF, moteur adaptatif, gestion de position</p>
             </div>
             <div class="ta-stack-item">
-                <h4>Flask</h4>
-                <p>Serveur web — API REST + Dashboard</p>
-            </div>
-            <div class="ta-stack-item">
-                <h4>SQLite</h4>
-                <p>Persistance trades, paramètres, historique</p>
-            </div>
-            <div class="ta-stack-item">
-                <h4>ccxt</h4>
-                <p>Connexion Bybit — OHLCV, prix, exécution</p>
+                <h4>ccxt + pybit</h4>
+                <p>API Bybit — OHLCV, prix temps réel, WebSocket klines 3 timeframes</p>
             </div>
             <div class="ta-stack-item">
                 <h4>Pandas</h4>
-                <p>Calcul RSI, moving averages, indicateurs</p>
+                <p>Calcul ADX, DI+/DI-, ATR, RSI, SuperTrend, Chandelier Exit</p>
+            </div>
+            <div class="ta-stack-item">
+                <h4>Flask</h4>
+                <p>API REST — Dashboard temps réel avec TradingView Charts</p>
+            </div>
+            <div class="ta-stack-item">
+                <h4>SQLite</h4>
+                <p>Persistance complète — trades, positions, paramètres adaptatifs</p>
             </div>
             <div class="ta-stack-item">
                 <h4>TradingView Charts</h4>
-                <p>Graphiques chandelles temps réel</p>
+                <p>Graphiques chandelles avec marqueurs d'entrée/sortie et overlays</p>
             </div>
             <div class="ta-stack-item">
                 <h4>Cloudflare Tunnel</h4>
-                <p>Accès distant sécurisé au dashboard local</p>
+                <p>Accès distant sécurisé au dashboard depuis n'importe où</p>
             </div>
             <div class="ta-stack-item">
                 <h4>GitHub</h4>
-                <p>Open source — code complet disponible</p>
+                <p>Open source — TNK-Sempai/TNK-ADAPTIVE</p>
             </div>
         </div>
     </section>
@@ -217,8 +233,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </div>
             <pre><code id="installCode">git clone https://github.com/TNK-Sempai/TNK-ADAPTIVE.git
 cd TNK-ADAPTIVE
-python -m pip install -r requirements.txt
-python main.py
+pip install ccxt pybit pandas flask flask-cors flask-limiter
+python main.py --reset
 <span class="cm"># Dashboard → http://localhost:5000</span></code></pre>
         </div>
         <p class="reveal"
@@ -233,25 +249,36 @@ python main.py
         <div class="label reveal" data-i18n="tnk_adaptive.roadmap_label"></div>
         <h2 class="section-h reveal" data-i18n="tnk_adaptive.roadmap_heading" data-i18n-html="true"></h2>
         <ul class="ta-roadmap reveal">
-            <li class="done"><span class="ta-rm-icon">✅</span> Paper trading multi-paires</li>
-            <li class="done"><span class="ta-rm-icon">✅</span> Dashboard chandelles live</li>
-            <li class="done"><span class="ta-rm-icon">✅</span> Moteur adaptatif</li>
-            <li class="done"><span class="ta-rm-icon">✅</span> Persistance SQLite</li>
+            <li class="done"><span class="ta-rm-icon">✅</span> Paper trading multi-paires (50 paires, top volume)</li>
+            <li class="done"><span class="ta-rm-icon">✅</span> Dashboard chandelles live + marqueurs trades</li>
+            <li class="done"><span class="ta-rm-icon">✅</span> Moteur adaptatif (ATR, ADX, Chandelier)</li>
+            <li class="done"><span class="ta-rm-icon">✅</span> Persistance SQLite (survit aux redémarrages)</li>
+            <li class="done"><span class="ta-rm-icon">✅</span> Multi-timeframe 1/3/5 min</li>
+            <li class="done"><span class="ta-rm-icon">✅</span> ATR trailing stop (Chandelier Exit)</li>
+            <li class="done"><span class="ta-rm-icon">✅</span> Filtre ADX + direction DI</li>
+            <li class="done"><span class="ta-rm-icon">✅</span> Partial Take Profit (scaling out 3 paliers)</li>
+            <li class="done"><span class="ta-rm-icon">✅</span> Anti-corrélation spot/futures</li>
+            <li class="done"><span class="ta-rm-icon">✅</span> WebSocket Bybit temps réel (pybit v5)</li>
             <li class="todo"><span class="ta-rm-icon">⬜</span> Alertes n8n → Discord / Telegram</li>
-            <li class="todo"><span class="ta-rm-icon">⬜</span> Support argent réel</li>
             <li class="todo"><span class="ta-rm-icon">⬜</span> Backtesting historique</li>
-            <li class="todo"><span class="ta-rm-icon">⬜</span> Docker + VPS</li>
+            <li class="todo"><span class="ta-rm-icon">⬜</span> Docker + VPS déploiement</li>
+            <li class="todo"><span class="ta-rm-icon">⬜</span> Support argent réel (Bybit live)</li>
         </ul>
     </section>
 
-    <!-- ─── 07 · DASHBOARD LIVE ─── -->
+    <!-- ─── 07 · SOURCES ─── -->
     <section class="ta-section">
-        <div class="label reveal" data-i18n="tnk_adaptive.dashboard_label"></div>
-        <h2 class="section-h reveal" data-i18n="tnk_adaptive.dashboard_heading" data-i18n-html="true"></h2>
-        <div class="ta-demo-wrap reveal">
-            <iframe src="https://irrigation-southampton-sisters-minus.trycloudflare.com" frameborder="0"
-                style="width:100%;aspect-ratio:16/9;min-height:300px;display:block;" allowfullscreen loading="lazy">
-            </iframe>
+        <div class="label reveal">07 — SOURCES THÉORIQUES</div>
+        <h2 class="section-h reveal">Basé sur des<span> stratégies éprouvées</span></h2>
+        <div class="ta-stack reveal">
+            <div class="ta-stack-item">
+                <h4>Henry Gambell — Simpler Trading</h4>
+                <p>ATR Trailing Stop multi-timeframe : période 9, multiplicateur 2.9 strict / 3.4 souple, méthode exponentielle</p>
+            </div>
+            <div class="ta-stack-item">
+                <h4>Mind Math Money</h4>
+                <p>ADX regime filter, ATR position sizing (2× SL / 4× TP), scaling out, liquidity sweep avoidance, market structure exits</p>
+            </div>
         </div>
     </section>
 
@@ -337,7 +364,7 @@ python main.py
     <script src="/i18n.js"></script>
     <script>
         function copyInstall() {
-            const raw = `git clone https://github.com/TNK-Sempai/TNK-ADAPTIVE.git\ncd TNK-ADAPTIVE\npython -m pip install -r requirements.txt\npython main.py\n# Dashboard → http://localhost:5000`;
+            const raw = `git clone https://github.com/TNK-Sempai/TNK-ADAPTIVE.git\ncd TNK-ADAPTIVE\npip install ccxt pybit pandas flask flask-cors flask-limiter\npython main.py --reset\n# Dashboard → http://localhost:5000`;
             const btn = document.getElementById('copyBtn');
             navigator.clipboard.writeText(raw).then(() => {
                 btn.textContent = '✓ Copié';
